@@ -18,3 +18,62 @@ menubar,
   }
 }
 
+%toolbar {
+  -gtkwidget-window-dragging: true;
+  padding: 4px;
+  background-color: $bg_color;
+}
+
+toolbar {
+  @extend %toolbar;
+
+  toolbutton#Prev,
+  toolbutton#Next {
+    > button {
+      background-color: $button_non_empty_stack_background;
+
+      &:disabled {
+        background-color: $button_empty_stack_background;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $button_non_empty_stack_hover_background;
+      }
+    }
+  }
+
+  button {
+    background-color: $bg_color;
+    padding: 5px;
+    margin: 8px 0px;
+    border: 1px $bg_color solid;
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+      background-color: $button_hover_background;
+      border-color: $button_hover_background;
+    }
+
+    &:active, &:checked {
+      background-color: $button_active_background;
+    }
+  }
+
+  toolitem {
+    background-color: orange;
+    box {
+      color: $text_field_text;
+      background-color: $text_field_background;
+      margin: 8px;
+      padding: 0px 16px;
+      border: 1px $borders_color solid;
+      border-radius: 5px;
+      selection {
+        color: $text_field_background;
+        background-color: $text_field_text;
+      }
+    }
+  }
+}
