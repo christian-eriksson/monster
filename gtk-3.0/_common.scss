@@ -1,0 +1,10 @@
+.background {
+    color: $fg_color;
+    background-color: $bg_color;
+}
+
+.view,
+%view {
+  color: $text_color;
+  background-color: $base_color;
+}
