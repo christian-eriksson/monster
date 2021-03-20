@@ -8,3 +8,13 @@
   color: $text_color;
   background-color: $base_color;
 }
+
+menubar,
+.menubar {
+  background-color: $bg_color;
+
+  > menuitem {
+    padding: 5px 8px;
+  }
+}
+
