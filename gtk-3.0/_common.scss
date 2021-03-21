@@ -56,7 +56,8 @@ toolbar {
       border-color: $button_hover_background;
     }
 
-    &:active, &:checked {
+    &:active,
+    &:checked {
       background-color: $button_active_background;
     }
   }
