@@ -78,3 +78,67 @@ toolbar {
     }
   }
 }
+
+tabs {
+  padding: 0px 10px;
+  border-bottom: 1px $borders_color solid;
+
+  arrow {
+    background-color: $bg_color;
+    border: 1px $bg_color solid;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    padding: 0px 3px;
+
+    &:first-child {
+      margin-right: 5px;
+      margin-left: -5px;
+    }
+
+    &:last-child {
+      margin-right: -5px;
+      margin-left: 5px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $button_hover_background;
+      border-color: $button_hover_background;
+    }
+
+    &:active,
+    &:checked {
+      background-color: $button_active_background;
+    }
+  }
+}
+
+tab {
+  padding: 5px;
+  margin: 0px 1px;
+  background-color: $tab_inactive_background;
+  border-top: 3px $tab_inactive_background solid;
+  border-left: 1px $tab_inactive_separator solid;
+  border-right: 1px $tab_inactive_separator solid;
+
+  &:active,
+  &:checked,
+  &:active:hover,
+  &:checked:hover,
+  &:active:focus,
+  &:checked:focus {
+    background-color: $bg_color;
+    border-top: 3px $borders_color solid;
+    border-left: 1px $borders_color solid;
+    border-right: 1px $borders_color solid;
+    box-shadow: 0px 1px $bg_color;
+  }
+
+  &:hover,
+  &:focus {
+    border-top: 3px $tab_hover_border solid;
+    border-left: 1px $tab_hover_border solid;
+    border-right: 1px $tab_hover_border solid;
+  }
+}

@@ -20,6 +20,11 @@ $borders_edge: transparentize($borders_color, 0.80);
 $text_field_text: #C00075;
 $text_field_background: #E6E6E6;
 
+$tab_inactive_background: $base_color;
+$tab_inactive_border: $bg_color;
+$tab_inactive_separator: #555555;
+$tab_hover_border: #095674;
+
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 
