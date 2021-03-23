@@ -1,4 +1,8 @@
 #!/bin/sh
+COMPILE_DIR=compiled-theme
+GTK3_DIR=gtk-3.0
+GTK2_DIR=gtk-2.0
+mkdir -p $COMPILE_DIR/$GTK3_DIR
+sassc -t compact $GTK3_DIR/main.scss $COMPILE_DIR/$GTK3_DIR/gtk.css
+cp -r $GTK2_DIR $COMPILE_DIR
 
-sassc -t compact gtk-3.0/main.scss compiled-theme/gtk-3.0/gtk.css
-cp -r gtk-2.0 compiled-theme
