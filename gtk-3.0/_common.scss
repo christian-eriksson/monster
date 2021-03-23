@@ -27,6 +27,10 @@ menubar,
 toolbar {
   @extend %toolbar;
 
+  entry {
+    padding: 5px 10px;
+  }
+
   toolbutton#Prev,
   toolbutton#Next {
     > button {
@@ -59,22 +63,6 @@ toolbar {
     &:active,
     &:checked {
       background-color: $button_active_background;
-    }
-  }
-
-  toolitem {
-    background-color: orange;
-    box {
-      color: $text_field_text;
-      background-color: $text_field_background;
-      margin: 8px;
-      padding: 0px 16px;
-      border: 1px $borders_color solid;
-      border-radius: 5px;
-      selection {
-        color: $text_field_background;
-        background-color: $text_field_text;
-      }
     }
   }
 }
@@ -140,5 +128,32 @@ tab {
     border-top: 3px $tab_hover_border solid;
     border-left: 1px $tab_hover_border solid;
     border-right: 1px $tab_hover_border solid;
+  }
+}
+
+// The entry field in a spinbutton takes it's text color
+// from the parent rather than the entry selector.
+spinbutton {
+  color: $text_field_text;
+
+  * {
+    color: $text_color;
+  }
+}
+
+entry {
+  color: $text_field_text;
+  background-color: $text_field_background;
+  margin: 8px;
+  padding: 0px 10px;
+  border: 1px $borders_color solid;
+  border-radius: 5px;
+  selection {
+    color: $text_field_background;
+    background-color: $text_field_text;
+  }
+
+  & {
+    color: $text_field_text;
   }
 }
