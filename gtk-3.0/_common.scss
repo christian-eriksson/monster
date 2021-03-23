@@ -100,34 +100,41 @@ tabs {
       background-color: $button_active_background;
     }
   }
-}
 
-tab {
-  padding: 5px;
-  margin: 0px 1px;
-  background-color: $tab_inactive_background;
-  border-top: 3px $tab_inactive_background solid;
-  border-left: 1px $tab_inactive_separator solid;
-  border-right: 1px $tab_inactive_separator solid;
+  tab {
+    padding: 5px;
+    margin: 0px 1px;
+    background-color: $tab_inactive_background;
+    border-top: 3px $tab_inactive_background solid;
+    border-left: 1px $tab_inactive_separator solid;
+    border-right: 1px $tab_inactive_separator solid;
 
-  &:active,
-  &:checked,
-  &:active:hover,
-  &:checked:hover,
-  &:active:focus,
-  &:checked:focus {
-    background-color: $bg_color;
-    border-top: 3px $borders_color solid;
-    border-left: 1px $borders_color solid;
-    border-right: 1px $borders_color solid;
-    box-shadow: 0px 1px $bg_color;
-  }
+    &:active,
+    &:checked,
+    &:active:hover,
+    &:checked:hover,
+    &:active:focus,
+    &:checked:focus {
+      background-color: $bg_color;
+      border-top: 3px $borders_color solid;
+      border-left: 1px $borders_color solid;
+      border-right: 1px $borders_color solid;
+      box-shadow: 0px 1px $bg_color;
+    }
 
-  &:hover,
-  &:focus {
-    border-top: 3px $tab_hover_border solid;
-    border-left: 1px $tab_hover_border solid;
-    border-right: 1px $tab_hover_border solid;
+    &:hover,
+    &:focus {
+      border-top: 3px $tab_hover_border solid;
+      border-left: 1px $tab_hover_border solid;
+      border-right: 1px $tab_hover_border solid;
+    }
+
+    button {
+      padding: 0px;
+      margin: 0px;
+      background-color: $tab_inactive_background;
+      border: none;
+    }
   }
 }
 
