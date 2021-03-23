@@ -8,8 +8,11 @@ $borders_color: #69acc5;
 $warning_color: #b96408;
 $error_color: #f47f00;
 $success_color: #9ee500;
+$hover_color: #095674;
 
-$button_hover_background: #095674;
+$button_text_color: #69acc5;
+$button_background: #444444;
+$button_hover_background: $hover_color;
 $button_active_background: #057099;
 $button_empty_stack_background: #21404c;
 $button_non_empty_stack_background: #095674;
@@ -23,7 +26,7 @@ $text_field_background: #E6E6E6;
 $tab_inactive_background: $base_color;
 $tab_inactive_border: $bg_color;
 $tab_inactive_separator: #555555;
-$tab_hover_border: #095674;
+$tab_hover_border: $hover_color;
 
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);

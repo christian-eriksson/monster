@@ -27,6 +27,12 @@ menubar,
 toolbar {
   @extend %toolbar;
 
+  button {
+    border: none;
+    margin: 9px 2px;
+    background-color: $bg_color;
+  }
+
   entry {
     padding: 5px 10px;
   }
@@ -44,25 +50,6 @@ toolbar {
       &:focus {
         background-color: $button_non_empty_stack_hover_background;
       }
-    }
-  }
-
-  button {
-    background-color: $bg_color;
-    padding: 5px;
-    margin: 8px 0px;
-    border: 1px $bg_color solid;
-    border-radius: 5px;
-
-    &:hover,
-    &:focus {
-      background-color: $button_hover_background;
-      border-color: $button_hover_background;
-    }
-
-    &:active,
-    &:checked {
-      background-color: $button_active_background;
     }
   }
 }
@@ -120,6 +107,20 @@ tabs {
       border-left: 1px $borders_color solid;
       border-right: 1px $borders_color solid;
       box-shadow: 0px 1px $bg_color;
+
+      button {
+        background-color: $bg_color;
+
+        &:hover,
+        &:focus {
+          background-color: $button_hover_background;
+        }
+
+        &:active,
+        &:checked {
+          background-color: $button_active_background;
+        }
+      }
     }
 
     &:hover,
@@ -135,6 +136,43 @@ tabs {
       background-color: $tab_inactive_background;
       border: none;
     }
+  }
+}
+
+button {
+  color: $button_text_color;
+  background-color: $button_background;
+  padding: 5px;
+  border: 1px $borders_color solid;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: $button_hover_background;
+  }
+
+  &:active,
+  &:checked {
+    background-color: $button_active_background;
+  }
+}
+
+treeview {
+  button {
+    border: 1px $tab_inactive_separator solid;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0;
+    margin: 3px 0px 0px;
+  }
+}
+
+header {
+  button {
+    background-color: $bg_color;
+    border: none;
+    padding: 3px;
+    margin: 0px 2px;
   }
 }
 
