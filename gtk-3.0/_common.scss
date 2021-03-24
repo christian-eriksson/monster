@@ -156,16 +156,6 @@ button {
   }
 }
 
-treeview {
-  button {
-    border: 1px $tab_inactive_separator solid;
-    border-top: none;
-    border-bottom: none;
-    border-radius: 0;
-    margin: 3px 0px 0px;
-  }
-}
-
 header {
   background-color: $bg_color;
   border-bottom: 1px $borders_color solid;
