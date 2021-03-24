@@ -56,7 +56,6 @@ toolbar {
 
 tabs {
   padding: 0px 10px;
-  border-bottom: 1px $borders_color solid;
 
   arrow {
     background-color: $bg_color;
@@ -168,6 +167,9 @@ treeview {
 }
 
 header {
+  background-color: $bg_color;
+  border-bottom: 1px $borders_color solid;
+
   button {
     background-color: $bg_color;
     border: none;
