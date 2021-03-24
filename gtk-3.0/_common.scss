@@ -141,8 +141,9 @@ tabs {
 button {
   color: $button_text_color;
   background-color: $button_background;
-  padding: 5px;
   border: 1px $borders_color solid;
+  padding: 5px 8px;
+  margin: 9px 5px;
   border-radius: 5px;
 
   &:hover,
