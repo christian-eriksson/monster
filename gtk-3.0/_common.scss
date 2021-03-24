@@ -172,9 +172,21 @@ header {
 // from the parent rather than the entry selector.
 spinbutton {
   color: $text_field_text;
+  caret-color: $text_field_text;
+  margin: 5px 3px;
 
   * {
     color: $text_color;
+  }
+
+  button {
+    color: $button_text_color;
+    margin: 9px 3px;
+    padding: 4px;
+  }
+
+  entry {
+    padding: 3px 6px;
   }
 }
 
