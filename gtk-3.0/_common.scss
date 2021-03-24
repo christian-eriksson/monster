@@ -193,11 +193,13 @@ spinbutton {
 
 entry {
   color: $text_field_text;
+  caret-color: $text_field_text;
   background-color: $text_field_background;
   margin: 8px;
-  padding: 0px 10px;
+  padding: 3px 10px;
   border: 1px $borders_color solid;
   border-radius: 5px;
+
   selection {
     color: $text_field_background;
     background-color: $text_field_text;
@@ -205,5 +207,15 @@ entry {
 
   & {
     color: $text_field_text;
+  }
+
+  image {
+    &.left {
+      margin-right: 3px;
+    }
+
+    &.right {
+      margin-left: 3px;
+    }
   }
 }
