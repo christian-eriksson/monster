@@ -191,6 +191,39 @@ spinbutton {
   }
 }
 
+radiobutton {
+  margin: 2px;
+  radio {
+    background-image: none;
+    margin-right: 4px;
+    min-width: 16px;
+    min-height: 16px;
+
+    &:disabled,
+    &:hover:disabled,
+    &:focus:disabled {
+      -gtk-icon-source: url("../assets/radio-unchecked.svg");
+    }
+
+    &:hover,
+    &:focus,
+    &:checked:hover,
+    &:active:hover {
+      -gtk-icon-source: url("../assets/radio-hover.svg");
+    }
+
+    &:checked,
+    &:active {
+      -gtk-icon-source: url("../assets/radio-checked.svg");
+    }
+
+    &:checked:disabled,
+    &:active:disabled {
+      -gtk-icon-source: url("../assets/radio-checked-disabled.svg");
+    }
+  }
+}
+
 entry {
   color: $text_field_text;
   caret-color: $text_field_text;
