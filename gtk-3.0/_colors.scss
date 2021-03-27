@@ -18,7 +18,6 @@ $button_empty_stack_background: #21404c;
 $button_non_empty_stack_background: #095674;
 $button_non_empty_stack_hover_background: #057099;
 
-$borders_edge: transparentize($borders_color, 0.80);
 
 $checkbox_check_color: $button_text_color;
 $checkbox_border: #057099;
@@ -37,18 +36,18 @@ $tab_hover_border: $hover_color;
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 
+$borders_edge: transparentize($borders_color, 0.80);
+
 //colors for the backdrop state, derived from the main colors.
 $backdrop_base_color: lighten($base_color, 1%);
-// $backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
 $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 50%);
 $backdrop_insensitive_color: lighten($backdrop_bg_color, 15%);
-// $backdrop_selected_fg_color: if($variant == 'light', $backdrop_base_color, $backdrop_text_color);
 $backdrop_borders_color: mix($borders_color, $bg_color, 80%);
+// $backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
+// $backdrop_selected_fg_color: if($variant == 'light', $backdrop_base_color, $backdrop_text_color);
 // $backdrop_dark_fill: mix($backdrop_borders_color, $backdrop_bg_color, 35%);
 // $backdrop_sidebar_bg_color: mix($backdrop_bg_color, $backdrop_base_color, 50%);
-
 // $backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
 // $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40%);
-
 // $backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
