@@ -224,6 +224,39 @@ radiobutton {
   }
 }
 
+checkbutton {
+  margin: 2px;
+  check {
+    color: $button_text_color;
+    background-image: none;
+    min-width: 16px;
+    min-height: 16px;
+    margin-right: 4px;
+    box-shadow: -2px 0 $checkbox_border inset, 2px 0 $checkbox_border inset,
+      0 -2px $checkbox_border inset, 0 2px $checkbox_border inset;
+    border-radius: 5px;
+
+    &:hover,
+    &:focus,
+    &:checked:hover,
+    &:active:hover {
+      background-color: $checkbox_hover;
+    }
+
+    &:disabled,
+    &:hover:disabled,
+    &:focus:disabled {
+      border-color: $checkbox_disabled;
+    }
+
+    &:checked:disabled,
+    &:active:disabled {
+      color: $checkbox_disabled_text;
+      border-color: $checkbox_disabled;
+    }
+  }
+}
+
 entry {
   color: $text_field_text;
   caret-color: $text_field_text;

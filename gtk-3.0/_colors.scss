@@ -20,6 +20,12 @@ $button_non_empty_stack_hover_background: #057099;
 
 $borders_edge: transparentize($borders_color, 0.80);
 
+$checkbox_check_color: $button_text_color;
+$checkbox_border: #057099;
+$checkbox_hover: #095674;
+$checkbox_disabled: #095674;
+$checkbox_disabled_text: #057099;
+
 $text_field_text: #C00075;
 $text_field_background: #E6E6E6;
 
