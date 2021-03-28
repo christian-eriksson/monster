@@ -1,5 +1,6 @@
 $fg_color: #e6e6e6;
 $text_color: #e6e6e6;
+$text_disabled_color: #b6b6b6;
 $bg_color: #333333;
 $base_color: #3c3c3c;
 $selected_bg_color: #69acc5;
@@ -18,7 +19,6 @@ $button_empty_stack_background: #21404c;
 $button_non_empty_stack_background: #095674;
 $button_non_empty_stack_hover_background: #057099;
 
-
 $checkbox_check_color: $button_text_color;
 $checkbox_border: #057099;
 $checkbox_hover: #095674;
@@ -27,6 +27,8 @@ $checkbox_disabled_text: #057099;
 
 $text_field_text: #C00075;
 $text_field_background: #E6E6E6;
+$menu_background: $bg_color;
+$menu_disabled_background: $base_color;
 
 $tab_inactive_background: $base_color;
 $tab_inactive_border: $bg_color;

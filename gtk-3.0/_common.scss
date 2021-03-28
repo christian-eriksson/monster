@@ -169,7 +169,39 @@ header {
   }
 }
 
-// The entry field in a spinbutton takes it's text color
+menubar,
+.menubar {
+  background-color: $base_color;
+  menuitem {
+    &:hover {
+      background-color: $hover_color;
+    }
+  }
+}
+
+menu,
+.menu,
+.context-menu {
+  padding: 3px 1px;
+  border: 1px solid $borders_color;
+  background-color: $menu_background;
+
+  menuitem {
+    padding: 3px 5px;
+    background-color: $menu_background;
+
+    &:hover {
+      background-color: $hover_color;
+    }
+
+    &:disabled {
+      background-color: $menu_disabled_background;
+      color: $text_disabled_color;
+    }
+  }
+}
+
+// The entry field in a spinbutton takes its text color
 // from the parent rather than the entry selector.
 spinbutton {
   color: $text_field_text;
