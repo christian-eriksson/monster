@@ -25,24 +25,24 @@ $checkbox_hover: #095674;
 $checkbox_disabled: #095674;
 $checkbox_disabled_text: #057099;
 
+$insensitive_fg_color: mix($fg_color, $bg_color, 50%);
+$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+
 $menu_background: $bg_color;
 $menu_disabled_background: $base_color;
-
-$text_field_text: #c00075;
-$text_field_background: #aaaaaa;
 
 $tab_inactive_background: $base_color;
 $tab_inactive_border: $bg_color;
 $tab_inactive_separator: #555555;
 $tab_hover_border: $hover_color;
 
-$insensitive_fg_color: mix($fg_color, $bg_color, 50%);
-$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$text_field_text: #c00075;
+$text_field_background: #aaaaaa;
 
 $treeview_item_selected: #057099;
 $treeview_item_selected_background: #095674;
 
-$borders_edge: transparentize($borders_color, 0.80);
+$borders_edge: transparentize($borders_color, 0.8);
 
 //colors for the backdrop state, derived from the main colors.
 $backdrop_base_color: lighten($base_color, 1%);

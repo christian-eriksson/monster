@@ -21,9 +21,9 @@ If you want to make changes you'll need the following:
 
 - `sassc`
 - GTK dev package
-  - libgtk-3-dev (debian)
-  - gtk3-devel (fedora)
-  - gtk3 (arch)
+  - `libgtk-3-dev` (debian)
+  - `gtk3-devel` (fedora)
+  - `gtk3` (arch)
 
 If you want to test the theme you'll need a couple of GTK applications at least one GTK 2 and one GTK 3 application. For example:
 
@@ -53,6 +53,8 @@ gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
 ```
 
 Focus the GTK application and press: `Control+Shift+D`.
+
+> *Note:* Some applications binds `ctrl+shift+d` to other actions in which case you might need to try the `GTK_DEBUG` option.
 
 It's not always clear what selectors will impact what elements. It may be helpful to use a finished theme (preferably quite minimalistic), change the colors, check what elements changes and what selector the color was used in. [AdMin](https://github.com/nrhodes91/AdMin) is a good choice to play around with. You may have to create a gtk-2.0 directory and `gtkrc` file for your theme chooser application (e.g. lxappearence) to find the theme, you may copy the gtk-2.0 directory of this repo.
 
