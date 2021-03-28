@@ -317,3 +317,12 @@ entry {
     }
   }
 }
+
+treeview {
+  &:selected {
+    background-color: $treeview_item_selected_background;
+    &:focus {
+      background-color: $treeview_item_selected;
+    }
+  }
+}

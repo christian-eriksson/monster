@@ -39,6 +39,9 @@ $tab_hover_border: $hover_color;
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 
+$treeview_item_selected: #057099;
+$treeview_item_selected_background: #095674;
+
 $borders_edge: transparentize($borders_color, 0.80);
 
 //colors for the backdrop state, derived from the main colors.
