@@ -18,6 +18,8 @@ $button_active_background: #057099;
 $button_empty_stack_background: #21404c;
 $button_non_empty_stack_background: #095674;
 $button_non_empty_stack_hover_background: #057099;
+$button_disabled_border: #057099;
+$button_disabled_text: #057099;
 
 $checkbox_check_color: $button_text_color;
 $checkbox_border: #057099;
@@ -38,6 +40,8 @@ $tab_hover_border: $hover_color;
 
 $text_field_text: #c00075;
 $text_field_background: #aaaaaa;
+$text_field_disabled_text: #791953;
+$text_field_disabled_border: $button_disabled_border;
 
 $treeview_item_selected: #057099;
 $treeview_item_selected_background: #095674;

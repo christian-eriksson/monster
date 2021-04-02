@@ -225,7 +225,6 @@ spinbutton {
     border-radius: 0px;
 
     &:last-child {
-      border-color: $borders_color;
       border-radius: 0px 5px 5px 0px;
     }
   }
@@ -237,6 +236,24 @@ spinbutton {
     border-width: 1px 0px 1px 1px;
     border-color: $borders_color;
     border-radius: 5px 0px 0px 5px;
+  }
+
+  &:disabled {
+    color: $text_field_disabled_text;
+    caret-color: $text_field_disabled_text;
+
+    * {
+      color: $text_color;
+    }
+
+    button {
+      color: $button_disabled_text;
+      border-color: $button_disabled_border;
+    }
+
+    entry {
+      border-color: $text_field_disabled_border;
+    }
   }
 }
 
