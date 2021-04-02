@@ -51,6 +51,16 @@ $progress_bar_color: #69acc5;
 $progress_bar_no_progress_color: #057099;
 $progress_bar_text: #e6e6e6;
 
+$scale_background: #555555;
+$scale_border: $borders_color;
+$scale_focus_border: #057099;
+$scale_disabled_border: $button_disabled_border;
+$scale_highlight_background: $progress_bar_no_progress_color;
+$scale_highlight_hover_background: $button_hover_background;
+$scale_highlight_active_background: $bg_color;
+$scale_disabled_highlight_background: #095674;
+$scale_handle: #21404c;
+
 $borders_edge: transparentize($borders_color, 0.8);
 
 //colors for the backdrop state, derived from the main colors.

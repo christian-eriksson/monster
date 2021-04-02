@@ -410,3 +410,59 @@ progressbar {
     }
   }
 }
+
+scale {
+  color: $text_color;
+  min-width: 10px;
+  min-height: 8px;
+  margin: 1px;
+
+  * {
+    color: $text_color;
+  }
+
+  trough {
+    min-width: 10px;
+    min-height: 3px;
+    border: 1px $scale_border solid;
+    border-radius: 3px;
+    background-color: $scale_background;
+
+    &:focus {
+      outline-offset: 2px;
+      outline-style: dashed;
+      outline-width: 1px;
+      outline-color: $scale_focus_border;
+      -gtk-outline-radius: 2px;
+    }
+
+    &:disabled {
+      border-color: $scale_disabled_border;
+    }
+
+    slider {
+      border: 3px $scale_handle solid;
+      padding: 3px 0px;
+    }
+
+    highlight {
+      border-radius: 2px;
+      padding: 2px 5px;
+      background-color: $scale_highlight_background;
+
+      &:hover,
+      &:focus {
+        background-color: $scale_highlight_hover_background;
+      }
+
+      &:active,
+      &:checked {
+        background-color: $scale_highlight_active_background;
+      }
+
+      &:disabled {
+        background-color: $scale_disabled_highlight_background;
+      }
+    }
+  }
+}
