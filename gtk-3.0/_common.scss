@@ -143,7 +143,7 @@ button {
   background-color: $button_background;
   border: 1px $borders_color solid;
   padding: 5px 8px;
-  margin: 0px;
+  margin: 1px;
   border-radius: 5px;
 
   &:hover,
@@ -206,7 +206,7 @@ menu,
 spinbutton {
   color: $text_field_text;
   caret-color: $text_field_text;
-  margin: 0px;
+  margin: 1px;
   padding: 0px;
 
   * {
