@@ -390,14 +390,23 @@ combobox {
 }
 
 progressbar {
+  color: $progress_bar_text;
+  margin: 1px;
+
   trough {
     border: 1px $progress_bar_border solid;
     border-radius: 4px;
     background-color: $progress_bar_no_progress_color;
+    margin-top: -18px;
+
     progress {
       border: 1px $progress_bar_color solid;
       background-color: $progress_bar_color;
       border-radius: 4px 0px 0px 4px;
+      padding: 4px 0px;
+      outline-width: 1px;
+      outline-color: $progress_bar_color;
+      outline-offset: 1px;
     }
   }
 }

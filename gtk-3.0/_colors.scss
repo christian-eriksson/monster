@@ -46,9 +46,10 @@ $text_field_disabled_border: $button_disabled_border;
 $treeview_item_selected: #057099;
 $treeview_item_selected_background: #095674;
 
+$progress_bar_border: #69acc5;
 $progress_bar_color: #69acc5;
-$progress_bar_border: $progress_bar_color;
-$progress_bar_no_progress_color: #095674;
+$progress_bar_no_progress_color: #057099;
+$progress_bar_text: #e6e6e6;
 
 $borders_edge: transparentize($borders_color, 0.8);
 
