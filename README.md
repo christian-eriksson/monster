@@ -10,7 +10,7 @@ To install the theme:
 
 ```
 clone <repository>
-ln -sf <repository-path>/compiled-theme ~/.themes/monster
+ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 ```
 
 Use something like `lxappearance` to select and activate the theme.
