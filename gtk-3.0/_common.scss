@@ -31,12 +31,29 @@ toolbar {
 
   button {
     border: none;
-    margin: 9px 2px;
     background-color: $bg_color;
   }
 
-  entry {
-    padding: 5px 10px;
+  &.horizontal {
+    button {
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+
+    entry {
+      margin-left: 9px;
+      margin-right: 9px;
+    }
+
+    spinbutton {
+      button {
+        margin: 0px;
+      }
+
+      entry {
+        margin: 0px;
+      }
+    }
   }
 
   toolbutton#Prev,
@@ -51,6 +68,28 @@ toolbar {
       &:hover,
       &:focus {
         background-color: $button_non_empty_stack_hover_background;
+      }
+    }
+  }
+
+  toolitem,
+  toolbutton {
+    button {
+      margin: 2px;
+      min-height: 16px;
+      min-width: 16px;
+      padding: $button_padding;
+    }
+
+    spinbutton {
+      button {
+        margin: 0px;
+      }
+    }
+
+    box {
+      entry {
+        margin: 0px;
       }
     }
   }
@@ -161,16 +200,6 @@ button {
   &.toggle {
     border: none;
     padding: $button_padding + 1px;
-  }
-}
-
-toolitem,
-toolbutton {
-  button {
-    margin: 1px;
-    min-height: 16px;
-    min-width: 16px;
-    padding: $button_padding;
   }
 }
 
