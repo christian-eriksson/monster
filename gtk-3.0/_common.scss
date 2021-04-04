@@ -201,6 +201,11 @@ button {
     border: none;
     padding: $button_padding + 1px;
   }
+
+  &:disabled {
+    color: $button_disabled_text;
+    border-color: $button_disabled_border;
+  }
 }
 
 header {
