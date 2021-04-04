@@ -497,3 +497,88 @@ scale {
     }
   }
 }
+
+scrollbar {
+  $slider_min_length: 40px;
+  $slider_min_width: 3px;
+  $slider_margin: 2px;
+  // The steppers are the buttons at the edges of the scrollbar where
+  // you can "step" the scroll position
+  /* prettier-ignore */
+  @at-root * {
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+  }
+  background-color: $scrollbar_background;
+  transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  &.top {
+    border-bottom: 1px solid $scrollbar_border;
+  }
+  &.bottom {
+    border-top: 1px solid $scrollbar_border;
+  }
+  &.left {
+    border-right: 1px solid $scrollbar_border;
+  }
+  &.right {
+    border-left: 1px solid $scrollbar_border;
+  }
+  slider {
+    min-width: $slider_min_width;
+    min-height: $slider_min_width;
+    margin: $slider_margin;
+    border: 1px solid $scrollbar_slider_border;
+    border-radius: 8px;
+    background-clip: padding-box;
+    background-color: $scrollbar_slider_background;
+    &:hover {
+      background-color: $scrollbar_slider_hover_background;
+    }
+    &:hover:active {
+      background-color: $scrollbar_slider_active_background;
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+  &.horizontal slider {
+    min-width: $slider_min_length;
+  }
+  &.vertical slider {
+    min-height: $slider_min_length;
+  }
+  &.fine-tune {
+    slider {
+      min-width: $slider_min_width;
+      min-height: $slider_min_width;
+    }
+  }
+  &.overlay-indicator {
+    &:not(.dragging):not(.hovering) {
+      border-color: transparent;
+      opacity: 0.6;
+      background-color: transparent;
+      slider {
+        margin: $slider_margin;
+        min-width: 3px;
+        min-height: 3px;
+        background-color: $scrollbar_slider_background;
+        border: 1px solid $scrollbar_slider_border;
+      }
+      &.horizontal {
+        slider {
+          min-width: $slider_min_length;
+        }
+      }
+      &.vertical {
+        slider {
+          min-height: $slider_min_length;
+        }
+      }
+    }
+    &.dragging,
+    &.hovering {
+      opacity: 0.9;
+    }
+  }
+}
