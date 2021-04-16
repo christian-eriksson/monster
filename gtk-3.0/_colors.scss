@@ -6,26 +6,26 @@ $base_color: #3c3c3c;
 $selected_bg_color: #69acc5;
 $selected_fg_color: #ffffff;
 $borders_color: #69acc5;
-$warning_color: #b96408;
+$warning_color: #ce6d05;
 $error_color: #f47f00;
-$success_color: #9ee500;
-$hover_color: #095674;
+$success_color: #9de400;
+$hover_color: #057099;
 
 $button_text_color: #69acc5;
 $button_background: #444444;
 $button_hover_background: $hover_color;
-$button_active_background: #057099;
-$button_empty_stack_background: #21404c;
-$button_non_empty_stack_background: #095674;
-$button_non_empty_stack_hover_background: #057099;
-$button_disabled_border: #057099;
-$button_disabled_text: #057099;
+$button_active_background: #058abe;
+$button_empty_stack_background: #095674;
+$button_non_empty_stack_background: #057099;
+$button_non_empty_stack_hover_background: #058abe;
+$button_disabled_border: #058abe;
+$button_disabled_text: #058abe;
 
 $checkbox_check_color: $button_text_color;
-$checkbox_border: #057099;
-$checkbox_hover: #095674;
-$checkbox_disabled: #095674;
-$checkbox_disabled_text: #057099;
+$checkbox_border: #058abe;
+$checkbox_hover: #057099;
+$checkbox_disabled: #057099;
+$checkbox_disabled_text: #058abe;
 
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);
@@ -43,23 +43,23 @@ $text_field_background: #aaaaaa;
 $text_field_disabled_text: #791953;
 $text_field_disabled_border: $button_disabled_border;
 
-$treeview_item_selected: #057099;
-$treeview_item_selected_background: #095674;
+$treeview_item_selected: #058abe;
+$treeview_item_selected_background: #057099;
 
 $progress_bar_border: #69acc5;
 $progress_bar_color: #69acc5;
-$progress_bar_no_progress_color: #057099;
+$progress_bar_no_progress_color: #058abe;
 $progress_bar_text: #e6e6e6;
 
 $scale_background: #555555;
 $scale_border: $borders_color;
-$scale_focus_border: #057099;
+$scale_focus_border: #058abe;
 $scale_disabled_border: $button_disabled_border;
 $scale_highlight_background: $progress_bar_no_progress_color;
 $scale_highlight_hover_background: $button_hover_background;
 $scale_highlight_active_background: $bg_color;
-$scale_disabled_highlight_background: #095674;
-$scale_handle: #21404c;
+$scale_disabled_highlight_background: #057099;
+$scale_handle: #095674;
 
 $scrollbar_background: rgba(85, 85, 85, 0.15);
 $scrollbar_border: #21404c;
