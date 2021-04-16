@@ -62,10 +62,10 @@ $scale_disabled_highlight_background: #057099;
 $scale_handle: #095674;
 
 $scrollbar_background: rgba(85, 85, 85, 0.15);
-$scrollbar_border: #21404c;
-$scrollbar_slider_border: #095674;;
-$scrollbar_slider_background: #095674;
-$scrollbar_slider_hover_background: #057099;
+$scrollbar_border: #095674;
+$scrollbar_slider_border: #057099;
+$scrollbar_slider_background: #057099;
+$scrollbar_slider_hover_background: #058abe;
 $scrollbar_slider_active_background: #69acc5;
 
 $borders_edge: transparentize($borders_color, 0.8);
