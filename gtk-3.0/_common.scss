@@ -278,6 +278,10 @@ spinbutton {
     &:last-child {
       border-radius: 0px 5px 5px 0px;
     }
+
+    &:disabled {
+      border-color: $borders_color;
+    }
   }
 
   entry {
@@ -299,11 +303,11 @@ spinbutton {
 
     button {
       color: $button_disabled_text;
-      border-color: $button_disabled_border;
+      border-color: $borders_color;
     }
 
     entry {
-      border-color: $text_field_disabled_border;
+      border-color: $borders_color;
     }
   }
 }
