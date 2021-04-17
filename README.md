@@ -12,7 +12,11 @@ To install the theme:
 clone <repository>
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 mkdir -p ~/.config/term-themes
+<<<<<<< HEAD
 ln -sf <repository-path>/compiled-theme/application-theme/terminal/ ~/.config/term-themes/monster
+=======
+ln -sf <repository-path>/compiled-theme/application-themes/terminal/ ~/.config/term-themes/monster
+>>>>>>> 21876cf3765d5a18ea395fc32f684c04281d9a9e
 ```
 
 add the following to `~/.bashrc`:

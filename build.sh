@@ -3,7 +3,7 @@ COMPILE_DIR=compiled-theme
 GTK3_DIR=gtk-3.0
 GTK2_DIR=gtk-2.0
 ASSETS_DIR=assets
-APPLICATION_THEMES_DIR=application-theme
+APPLICATION_THEMES_DIR=application-themes
 
 mkdir -p $COMPILE_DIR/gtk/$GTK3_DIR/
 sassc -t compact $GTK3_DIR/main.scss $COMPILE_DIR/gtk/$GTK3_DIR/gtk.css
