@@ -9,17 +9,17 @@ $borders_color: #69acc5;
 $warning_color: #ce6d05;
 $error_color: #f47f00;
 $success_color: #9de400;
-$hover_color: #057099;
+$hover_color: #058abe;
 
 $button_text_color: #69acc5;
 $button_background: #444444;
 $button_hover_background: $hover_color;
-$button_active_background: #058abe;
-$button_empty_stack_background: #095674;
-$button_non_empty_stack_background: #057099;
-$button_non_empty_stack_hover_background: #058abe;
-$button_disabled_border: #058abe;
-$button_disabled_text: #058abe;
+$button_active_background: #057099;
+$button_empty_stack_background: #02425c;
+$button_non_empty_stack_background: #095674;
+$button_non_empty_stack_hover_background: #057099;
+$button_disabled_border: #057099;
+$button_disabled_text: #057099;
 
 $checkbox_check_color: $button_text_color;
 $checkbox_border: #058abe;
@@ -48,7 +48,7 @@ $treeview_item_selected_background: #057099;
 
 $progress_bar_border: #69acc5;
 $progress_bar_color: #69acc5;
-$progress_bar_no_progress_color: #058abe;
+$progress_bar_no_progress_color: #057099;
 $progress_bar_text: #e6e6e6;
 
 $scale_background: #555555;
