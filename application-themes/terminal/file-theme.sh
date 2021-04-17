@@ -56,4 +56,4 @@ for misc_media_extension in $__m_misc_media_extensions; do
   LS_COLORS="$LS_COLORS:*$misc_media_extension=$__m_misc_media_color"
 done
 
-export $LS_COLORS
+export LS_COLORS
