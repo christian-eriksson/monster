@@ -1,5 +1,5 @@
 __m_dir_color="1;4;38;2;105;172;197"
-__m_link_color="1;38;2;221;4;138"
+__m_link_color="1;3;38;2;221;4;138"
 __m_multihardlink_color="00"
 __m_pipe_color="1;38;2;196;36;132;48;2;170;170;170"
 __m_sock_color="1;38;2;2;66;92;48;2;170;170;170"
@@ -21,7 +21,7 @@ LS_COLORS="$LS_COLORS:do=$__m_door_color:bd=$__m_blk_color:cd=$__m_chr_color:or=
 LS_COLORS="$LS_COLORS:su=$__m_setuid_color:sg=$__m_setgid_color:ca=$__m_capability_color:tw=$__m_sticky_other_writable_color"
 LS_COLORS="$LS_COLORS:ow=$__m_other_writable_color:st=$__m_sticky_color:ex=$__m_exec_color"
 
-__m_archive_color="38;2;177;29;118"
+__m_archive_color="38;2;221;4;138"
 __m_archive_extensions=".7z .ace .alz .arc .arj .bz .bz2 .cab .cpio .deb .dwm .dz .ear .esd .gz .jar .lha .lrz .lz .lz4 \
 .lzh .lzma .lzo .rar .rpm .rz .sar .swm .t7z .tar .taz .tbz .tbz2 .tgz .tlz .txz .tz .tzo .tzst .war .wim .xz .z .Z .zip \
 .zoo .zst"
