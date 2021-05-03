@@ -4,6 +4,11 @@ A pretty monster for theming GTK 2 and GTK 3 applications using the i3 window ma
 
 > **Note:** As the theme is made for i3 it might not look as good with other window managers.
 
+## Requirements
+
+- Terminal with support for RGB color code strings, eg. gnome-terminal
+- a patched [nerd font](https://github.com/ryanoasis/nerd-fonts), set as font for the system and terminal.
+
 ## Install
 
 To install the theme:
@@ -12,13 +17,16 @@ To install the theme:
 clone <repository>
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 mkdir -p ~/.config/term-themes
+mkdir -p /root/.config/term-themes
 ln -sf <repository-path>/compiled-theme/application-theme/terminal/ ~/.config/term-themes/monster
+ln -sf <repository-path>/compiled-theme/application-theme/terminal/ /root/.config/term-themes/monster
 ```
 
-add the following to `~/.bashrc`:
+add the following to `~/.bashrc` and `/root/.bashrc`:
 
 ```
 source ~/.config/term-themes/monster/file-theme.sh
+source ~/.config/term-themes/monster/prompt-theme.sh
 ```
 
 Use something like `lxappearance` to select and activate the theme.
@@ -32,7 +40,6 @@ If you want to make changes you'll need the following:
   - `libgtk-3-dev` (debian)
   - `gtk3-devel` (fedora)
   - `gtk3` (arch)
-- Terminal with support for RGB color code strings, eg. gnome-terminal
 
 If you want to test the theme you'll need a couple of GTK applications at least one GTK 2 and one GTK 3 application. For example:
 
