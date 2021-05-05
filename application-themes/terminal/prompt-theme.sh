@@ -200,6 +200,3 @@ case "$(id -u)" in
   export PS2="${__m_user_secondary_prompt}"
   ;;
 esac
-
-# git: icon | branch | state(synced | ahead | behind | diverged) | content(untracked | staged | unstaged)
-# user vs root
