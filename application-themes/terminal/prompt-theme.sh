@@ -2,11 +2,11 @@
 
 __m_section_delimiter=""
 __m_section_divider_symbol=""
-__m_reset_style="\[\e[0m\]"
-# Using \001 and \002 instead of \[ and \] since the __m_rst_style will be used in command substitution
+
+# Using \001 and \002 instead of \001 and \002 since the __m_reset_style will be used in command substitution
 # https://wiki.archlinux.org/index.php/Bash/Prompt_customization#Bash_escape_sequences
 # https://superuser.com/questions/301353/escape-non-printing-characters-in-a-function-for-a-bash-prompt/301355#301355
-__m_rst_style="\001\e[0m\002"
+__m_reset_style="\001\e[0m\002"
 
 __m_venv_label_symbol=""
 __m_venv_foreground_color="177;29;118"
@@ -98,7 +98,7 @@ __m_get_path_end() {
   else
     __m_section_end="$(__m_get_section_end "$__m_path_background_color")"
   fi
-  echo -e "${__m_rst_style}${__m_section_end}"
+  echo -e "${__m_reset_style}${__m_section_end}"
 }
 
 __m__get_git_head_location() {
@@ -141,31 +141,31 @@ __m_get_git_section() {
     fi
 
     __m_git_label="$(__m_get_label "$__m_git_background_color" "$__m_git_foreground_color" "${__m_git_label_symbol} ${__m_git_sync_status_symbols}${__m_git_change_status_symbols}")"
-    echo -e "${__m_git_label}${__m_git_start_color} $(__m__get_git_head_location) ${__m_rst_style}${__m_git_end}"
+    echo -e "${__m_git_label}${__m_git_start_color} $(__m__get_git_head_location) ${__m_reset_style}${__m_git_end}"
   else
     echo ""
   fi
 }
 
-__m_user_start_color="\[\e[1;38;2;${__m_user_foreground_color};48;2;${__m_user_background_color}m\]"
+__m_user_start_color="\001\e[1;38;2;${__m_user_foreground_color};48;2;${__m_user_background_color}m\002"
 __m_user_label="$(__m_get_label "$__m_user_background_color" "$__m_user_foreground_color" "$__m_user_label_symbol")"
 __m_user_end="$(__m_get_section_end "$__m_user_background_color" "$__m_path_foreground_color")"
 __m_user_section="${__m_user_label}${__m_user_start_color} \u@\h ${__m_user_end}"
 
-__m_root_start_color="\[\e[1;38;2;${__m_root_foreground_color};48;2;${__m_root_background_color}m\]"
+__m_root_start_color="\001\e[1;38;2;${__m_root_foreground_color};48;2;${__m_root_background_color}m\002"
 __m_root_label="$(__m_get_label "$__m_root_background_color" "$__m_root_foreground_color" "$__m_root_label_symbol")"
 __m_root_end="$(__m_get_section_end "$__m_root_background_color" "$__m_path_foreground_color")"
 __m_root_section="${__m_root_label}${__m_root_start_color} \u@\h ${__m_root_end}"
 
-__m_path_start_color="\[\e[1;38;2;${__m_path_foreground_color};48;2;${__m_path_background_color}m\]"
+__m_path_start_color="\001\e[1;38;2;${__m_path_foreground_color};48;2;${__m_path_background_color}m\002"
 __m_path_label="$(__m_get_label "$__m_path_background_color" "$__m_path_foreground_color" "$__m_path_label_symbol")"
 __m_path_section="${__m_path_label}${__m_path_start_color} \w \$(__m_get_path_end)"
 
-__m_input_start_color="\[\e[38;2;${__m_input_foreground_color};48;2;${__m_input_background_color}m\]"
-__m_input_section="${__m_input_start_color} ${__m_input_label_symbol}${__m_reset_style}\[\e[1;38;2;${__m_input_background_color}m\]${__m_input_start_symbol}"
+__m_input_start_color="\001\e[38;2;${__m_input_foreground_color};48;2;${__m_input_background_color}m\002"
+__m_input_section="${__m_input_start_color} ${__m_input_label_symbol} ${__m_reset_style}\001\e[1;38;2;${__m_input_background_color}m\002${__m_input_start_symbol}"
 
-__m_root_input_start_color="\[\e[38;2;${__m_root_input_foreground_color};48;2;${__m_root_input_background_color}m\]"
-__m_root_input_section="${__m_root_input_start_color} ${__m_root_input_label_symbol}${__m_reset_style}\[\e[1;38;2;${__m_root_input_background_color}m\]${__m_input_start_symbol}"
+__m_root_input_start_color="\001\e[38;2;${__m_root_input_foreground_color};48;2;${__m_root_input_background_color}m\002"
+__m_root_input_section="${__m_root_input_start_color} ${__m_root_input_label_symbol} ${__m_reset_style}\001\e[1;38;2;${__m_root_input_background_color}m\002${__m_input_start_symbol}"
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
@@ -175,7 +175,7 @@ ${__m_user_section}\
 ${__m_path_section}\
 \$(__m_get_git_section)\
 \n${__m_input_section}${__m_reset_style} "
-__m_user_secondary_prompt="${__m_reset_style}\[\e[38;2;${__m_input_background_color}m\]${__m_secondary_input_start_symbol}${__m_reset_style} "
+__m_user_secondary_prompt="${__m_reset_style}\001\e[38;2;${__m_input_background_color}m\002${__m_secondary_input_start_symbol}${__m_reset_style} "
 
 __m_root_prompt="\n${TITLEBAR}\
 \$(__m_get_venv_section \"$__m_root_foreground_color\")\
@@ -183,7 +183,7 @@ ${__m_root_section}\
 ${__m_path_section}\
 \$(__m_get_git_section)\
 \n${__m_root_input_section}${__m_reset_style} "
-__m_root_secondary_prompt="${__m_reset_style}\[\e[38;2;${__m_root_input_background_color}m\]${__m_secondary_input_start_symbol}${__m_reset_style} "
+__m_root_secondary_prompt="${__m_reset_style}\001\e[38;2;${__m_root_input_background_color}m\002${__m_secondary_input_start_symbol}${__m_reset_style} "
 
 case "$(id -u)" in
 0)
