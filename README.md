@@ -10,6 +10,7 @@ A pretty monster for theming GTK 2 and GTK 3 applications using the i3 window ma
 - Terminal with support for RGB color code strings, eg. gnome-terminal
 - a patched [nerd font](https://github.com/ryanoasis/nerd-fonts), set as font for the system and terminal.
 - [feh image viewer](https://feh.finalrewind.org/)
+- picom
 
 ## Install
 
@@ -25,6 +26,7 @@ ln -sf <repository-path>/compiled-theme/application-theme/terminal/ /root/.confi
 mkdir -p ~/.config/feh
 mkdir -p ~/.wallpapers
 ln -sf <repository-path>/compiled-theme/application-themes/desktop/fehbg ~/.config/feh/fehbg
+ln -sf <repository-path>/compiled-theme/application-themes/picom ~/.config/
 ```
 
 add some image files in `~/.wallpapers/` and add the following to `~/.bashrc` and `/root/.bashrc`:
@@ -38,6 +40,7 @@ as well as the following to i3's `config` file:
 
 ```
 exec_always --no-startup-id ~/.config/feh/fehbg
+exec picom -b
 ```
 
 Use something like `lxappearance` to select and activate the theme.
