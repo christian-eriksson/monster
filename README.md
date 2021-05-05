@@ -6,8 +6,10 @@ A pretty monster for theming GTK 2 and GTK 3 applications using the i3 window ma
 
 ## Requirements
 
+- i3 window manager
 - Terminal with support for RGB color code strings, eg. gnome-terminal
 - a patched [nerd font](https://github.com/ryanoasis/nerd-fonts), set as font for the system and terminal.
+- [feh image viewer](https://feh.finalrewind.org/)
 
 ## Install
 
@@ -20,13 +22,22 @@ mkdir -p ~/.config/term-themes
 mkdir -p /root/.config/term-themes
 ln -sf <repository-path>/compiled-theme/application-theme/terminal/ ~/.config/term-themes/monster
 ln -sf <repository-path>/compiled-theme/application-theme/terminal/ /root/.config/term-themes/monster
+mkdir -p ~/.config/feh
+mkdir -p ~/.wallpapers
+ln -sf <repository-path>/compiled-theme/application-themes/desktop/fehbg ~/.config/feh/fehbg
 ```
 
-add the following to `~/.bashrc` and `/root/.bashrc`:
+add some image files in `~/.wallpapers/` and add the following to `~/.bashrc` and `/root/.bashrc`:
 
 ```
 source ~/.config/term-themes/monster/file-theme.sh
 source ~/.config/term-themes/monster/prompt-theme.sh
+```
+
+as well as the following to i3's `config` file:
+
+```
+exec_always --no-startup-id ~/.config/feh/fehbg
 ```
 
 Use something like `lxappearance` to select and activate the theme.
