@@ -68,6 +68,8 @@ $scrollbar_slider_background: #057099;
 $scrollbar_slider_hover_background: #058abe;
 $scrollbar_slider_active_background: #69acc5;
 
+$terminal_background: $bg_color;
+
 $borders_edge: transparentize($borders_color, 0.8);
 
 //colors for the backdrop state, derived from the main colors.

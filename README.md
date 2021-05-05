@@ -19,6 +19,7 @@ To install the theme:
 ```
 clone <repository>
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
+ln -sf <repository-path>/compiled-theme/gtk/gtk-3.0/app-specific.css ~/.config/gtk-3.0/gtk.css
 mkdir -p ~/.config/term-themes
 mkdir -p /root/.config/term-themes
 ln -sf <repository-path>/compiled-theme/application-theme/terminal/ ~/.config/term-themes/monster
