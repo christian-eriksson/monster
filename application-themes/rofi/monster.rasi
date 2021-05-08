@@ -1,0 +1,169 @@
+/******************************************************************************
+ * ROFI Color theme
+ * User: chris
+ * Copyright: Christian Eriksson
+ ******************************************************************************/
+
+* {
+  text-field-background:              rgba(170, 170, 170, 100%);
+  text-field-text-color:              rgba(221, 4, 138, 100%);
+  text-field-placeholder-color:       rgba(107, 16, 70, 100%);
+  main-background-color:              rgba(51, 51, 51, 80%);
+  surrounding-background-color:       rgba(60, 60, 60, 85%);
+  element-selected-background:        rgba(5, 138, 190, 100%);
+  element-urgent-background:          rgba(177, 29, 118, 100%);
+  element-urgent-selected-background: rgba(221, 4, 138, 100%);
+  element-active-background:          rgba(70, 95, 2, 100%);
+  element-active-selected-background: rgba(128, 185, 2, 100%);
+  internal-border-color:              rgba(9, 86, 116, 100%);
+  tab-inactive-border-color:          rgba(85, 85, 85, 100%);
+  tab-inactive-background-color:      rgba(60, 60, 60, 30%);
+  tab-selected-background-color:      rgba(51, 51, 51, 30%);
+
+  border-color:     rgba(105, 172, 197, 100%);
+  background-color: rgba ( 0, 0, 0, 0 % );
+  text-color:       rgba(230, 230, 230, 100%);
+
+  font: "DejaVuSansMono Nerd Font Mono 14";
+}
+
+window {
+  padding:          5;
+  background-color: @surrounding-background-color;
+  border:           0;
+  fullscreen:       true;
+}
+
+mainbox {
+  padding:          15px;
+  border:           2;
+  margin:           15% 25%;
+  background-color: @main-background-color;
+  children:         [ inputbar, message, listview, tabbox ];
+}
+
+/**
+ * Item list
+ **/ 
+listview {
+  padding:          2px 0px 0px;
+  scrollbar:        false;
+  spacing:          0;
+  fixed-height:     0;
+  background-color: transparent;
+}
+element {
+  padding: 5px 0 5px 8px;
+  margin:  2px 0;
+  spacing: 0;
+  border:  0;
+}
+element selected.normal {
+  background-color: @element-selected-background;
+}
+element normal.active {
+  background-color: @element-active-background;
+}
+element alternate.active {
+  background-color: @element-active-background;
+}
+element selected.active {
+  background-color: @element-active-selected-background;
+}
+element normal.urgent {
+  background-color: @element-urgent-background;
+}
+element alternate.urgent {
+  background-color: @element-urgent-background;
+}
+element selected.urgent {
+  background-color: @element-urgent-selected-background;
+}
+element-text {
+  padding: 5px 0 0 10px;
+}
+element-icon {
+  background-color: transparent;
+  size:             1.5em;
+}
+
+
+/**
+ * Message (current dir etc.)
+ **/
+message {
+  margin:       5px 0;
+  padding:      8px 0;
+  border:       2px 0px;
+  border-color: @internal-border-color;
+}
+
+
+/**
+ * Mode Switcher
+ **/
+tabbox {
+  expand:       false;
+  border:       0 0 2px 0;
+  border-color: @internal-border-color;
+  padding:      0 20px -2px;
+  children:     [ mode-switcher ];
+}
+button {
+  border:           4px 2px 0px;
+  padding:          4px 0 6px;
+  border-color:     @tab-inactive-border-color;
+  spacing:          0;
+  background-color: @tab-inactive-background-color;
+}
+button selected {
+  background-color: @tab-selected-background-color;
+  border-color:     @border-color;
+}
+
+/**
+ * Inputbar
+ */
+spacerbox {
+  orientation: horizontal;
+  expand:      false;
+  text-color:  @text-field-background;
+  children:    [ num-filtered-rows ];
+}
+num-filtered-rows {
+  text-color: inherit;
+  expand:     false;
+}
+inputbar {
+  padding:    1px;
+  spacing:    0px;
+  children:   [ inputbox ];
+}
+case-indicator {
+  spacing:    0;
+  text-color: inherit;
+}
+entry {
+  spacing:           0;
+  text-color:        inherit;
+  placeholder-color: @text-field-placeholder-color;
+  placeholder:       "Type to search";
+  font:              "DejaVuSansMono Nerd Font Mono 24";
+  padding:           0 0 16px 0;
+  margin:            0 7px;
+  background-color:  @text-field-background;
+}
+inputbox {
+  orientation:      horizontal;
+  text-color:       @text-field-text-color;
+  children:         [ textbox-prompt, entry, spacerbox, case-indicator ];
+  background-color: @text-field-background;
+  padding:          3px 0 2px;
+}
+textbox-prompt {
+  expand:     false;
+  str:        "";
+  font:       "DejaVuSansMono Nerd Font Mono 38";
+  padding:    -11px 0 0 8px;
+  text-color: inherit;
+}

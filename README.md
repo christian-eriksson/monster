@@ -28,6 +28,10 @@ mkdir -p ~/.config/feh
 mkdir -p ~/.wallpapers
 ln -sf <repository-path>/compiled-theme/application-themes/desktop/fehbg ~/.config/feh/fehbg
 ln -sf <repository-path>/compiled-theme/application-themes/picom ~/.config/
+mkdir -p ~/.local/share/rofi/themes
+mkdir -p ~/.config/rofi
+ln -sf <repository-path>/compiled-theme/application-themes/rofi/config.rasi ~/.config/rofi
+ln -sf <repository-path>/compiled-theme/application-themes/rofi/monster.rasi ~/.local/share/rofi/themes
 ```
 
 add some image files in `~/.wallpapers/` and add the following to `~/.bashrc` and `/root/.bashrc`:
