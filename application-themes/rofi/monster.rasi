@@ -44,7 +44,7 @@ mainbox {
 
 /**
  * Item list
- **/ 
+ **/
 listview {
   padding:          2px 0px 0px;
   scrollbar:        false;
