@@ -1,8 +1,8 @@
 # Monster
 
-A pretty monster for theming GTK 2 and GTK 3 applications using the i3 window manager.
+A pretty monster for theming a i3 window manager environment.
 
-> **Note:** As the theme is made for i3 it might not look as good with other window managers.
+> **Note:** Monster includes themes for GTK 2 and GTK 3 applications, however As the theme is made for i3 it might not look as good with other window managers.
 
 ## Requirements
 
