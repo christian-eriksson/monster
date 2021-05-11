@@ -6,11 +6,12 @@ A pretty monster for theming a i3 window manager environment.
 
 ## Requirements
 
-- i3 window manager
-- Terminal with support for RGB color code strings, eg. gnome-terminal
 - a patched [nerd font](https://github.com/ryanoasis/nerd-fonts), set as font for the system and terminal.
 - [feh image viewer](https://feh.finalrewind.org/)
-- picom
+- i3 window manager, preferably [i3-gaps](https://github.com/Airblader/i3)
+- [SASS commandline tool](https://sass-lang.com/install)
+- Terminal with support for RGB color code strings, eg. gnome-terminal
+- The [Picom compositor](https://wiki.archlinux.org/title/Picom)
 
 ## Install
 
@@ -32,9 +33,9 @@ mkdir -p ~/.wallpapers
 ln -sf <repository-path>/compiled-theme/application-themes/desktop/fehbg ~/.config/feh/fehbg
 ln -sf <repository-path>/compiled-theme/application-themes/picom ~/.config/
 mkdir -p ~/.local/share/rofi/themes
+ln -sf <repository-path>/compiled-theme/application-themes/rofi/monster.rasi ~/.local/share/rofi/themes
 mkdir -p ~/.config/rofi
 ln -sf <repository-path>/compiled-theme/application-themes/rofi/config.rasi ~/.config/rofi
-ln -sf <repository-path>/compiled-theme/application-themes/rofi/monster.rasi ~/.local/share/rofi/themes
 mkdir -p ~/.config/i3
 ln -sf <repository-path>/compiled-theme/application-themes/i3/config ~/.config/i3/
 ```
