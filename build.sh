@@ -18,6 +18,7 @@ GTK2_DIR=gtk-2.0
 ASSETS_DIR=assets
 APPLICATION_THEMES_DIR=application-themes
 
+rm -rf $COMPILE_DIR
 mkdir -p $COMPILE_DIR/gtk/$GTK3_DIR/
 sassc -t compact $GTK3_DIR/main.scss $COMPILE_DIR/gtk/$GTK3_DIR/gtk.css
 sassc -t compact $GTK3_DIR/app-specific.scss $COMPILE_DIR/gtk/$GTK3_DIR/app-specific.css
