@@ -1,11 +1,16 @@
 #!/bin/sh
 
 usage() {
-  echo "Usage: ./build.sh <base_i3_config_path>"
+  echo "Usage: ./build.sh <home_dir> <base_i3_config_path> [<i3blocks_disk_config>]"
 }
 
-[ -z "$1" ] && echo -e "Please provide the path to a base i3 config!\n" && usage && exit 1
-BASE_I3_CONFIG_PATH=$1
+[ -z "$1" ] && echo -e "Please provide a home dir for the user!\n" && usage && exit 1
+HOME_DIR=${1%/}
+
+[ -z "$2" ] && echo -e "Please provide the path to a base i3 config!\n" && usage && exit 1
+BASE_I3_CONFIG_PATH=$2
+
+I3BLOCKS_DISK_CONFIG_PATH=$3
 
 COMPILE_DIR=compiled-theme
 GTK3_DIR=gtk-3.0
@@ -19,6 +24,13 @@ sassc -t compact $GTK3_DIR/app-specific.scss $COMPILE_DIR/gtk/$GTK3_DIR/app-spec
 cp -r $GTK2_DIR $COMPILE_DIR/gtk
 cp -r $ASSETS_DIR $COMPILE_DIR/gtk
 cp -r $APPLICATION_THEMES_DIR $COMPILE_DIR
+
+I3BLOCKS_CONF_PATH=${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/i3/i3blocks.conf
+sed -i -e "s\{{HOME_DIR}}\\${HOME_DIR}\g" $I3BLOCKS_CONF_PATH
+
+DISK_ENTRIES=$(cat "${I3BLOCKS_DISK_CONFIG_PATH}" 2>/dev/null | tr "\n" "@")
+I3BLOCKS_CONF=$(sed -e "s%{{DISK_ENTRIES}}%${DISK_ENTRIES}%" $I3BLOCKS_CONF_PATH)
+echo "$I3BLOCKS_CONF" | tr "@" "\n" > $I3BLOCKS_CONF_PATH
 
 COMPILED_I3_CONFIG=${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/i3/config
 

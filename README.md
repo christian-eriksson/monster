@@ -6,9 +6,15 @@ A pretty monster for theming a i3 window manager environment.
 
 ## Requirements
 
-- a patched [nerd font](https://github.com/ryanoasis/nerd-fonts), set as font for the system and terminal.
+- a patched [nerd font](https://github.com/ryanoasis/nerd-fonts).
+  - By default this i3 configuration uses:
+    - NotoSans Nerd Font & NotoSans Nerd Font Mono for the i3bar
+  - It also expects a Mono Nerd font as default font for the system and terminal, eg.:
+    - DejaVuSansMono Nerd Font Mono
 - [feh image viewer](https://feh.finalrewind.org/)
 - i3 window manager, preferably [i3-gaps](https://github.com/Airblader/i3)
+- [i3 blocks](https://vivien.github.io/i3blocks/)
+- [pamixer](https://github.com/cdemoulins/pamixer), for i3blocks' volume script
 - [SASS commandline tool](https://sass-lang.com/install)
 - Terminal with support for RGB color code strings, eg. gnome-terminal
 - The [Picom compositor](https://wiki.archlinux.org/title/Picom)
@@ -21,7 +27,7 @@ To install the theme:
 
 ```
 clone <repository>
-./build.sh <base_i3_config_path>
+./build.sh <home_dir> <base_i3_config_path> [<i3blocks_disk_config>]
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 ln -sf <repository-path>/compiled-theme/gtk/gtk-3.0/app-specific.css ~/.config/gtk-3.0/gtk.css
 mkdir -p ~/.config/term-themes
@@ -32,11 +38,14 @@ mkdir -p ~/.config/feh
 mkdir -p ~/.wallpapers
 ln -sf <repository-path>/compiled-theme/application-themes/desktop/fehbg ~/.config/feh/fehbg
 ln -sf <repository-path>/compiled-theme/application-themes/picom ~/.config/
+mkdir -p ~/.local/bin
+ln -sf <repository-path>/compiled-theme/application-themes/i3/scripts ~/.local/bin/i3blocks
 mkdir -p ~/.local/share/rofi/themes
 ln -sf <repository-path>/compiled-theme/application-themes/rofi/monster.rasi ~/.local/share/rofi/themes
 mkdir -p ~/.config/rofi
 ln -sf <repository-path>/compiled-theme/application-themes/rofi/config.rasi ~/.config/rofi
 mkdir -p ~/.config/i3
+ln -sf <repository-path>/compiled-theme/application-themes/i3/i3blocks.conf ~/.config/i3/
 ln -sf <repository-path>/compiled-theme/application-themes/i3/config ~/.config/i3/
 ```
 
