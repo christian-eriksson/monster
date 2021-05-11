@@ -14,10 +14,13 @@ A pretty monster for theming GTK 2 and GTK 3 applications using the i3 window ma
 
 ## Install
 
+Prepare by creating a base config for i3, it should be a valid i3 config without commands to start fehbg and picom. The partial config files in the [i3 directory](application-themes/i3/partial-configs) will be appended to this base config.
+
 To install the theme:
 
 ```
 clone <repository>
+./build.sh <base_i3_config_path>
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 ln -sf <repository-path>/compiled-theme/gtk/gtk-3.0/app-specific.css ~/.config/gtk-3.0/gtk.css
 mkdir -p ~/.config/term-themes
@@ -32,6 +35,8 @@ mkdir -p ~/.local/share/rofi/themes
 mkdir -p ~/.config/rofi
 ln -sf <repository-path>/compiled-theme/application-themes/rofi/config.rasi ~/.config/rofi
 ln -sf <repository-path>/compiled-theme/application-themes/rofi/monster.rasi ~/.local/share/rofi/themes
+mkdir -p ~/.config/i3
+ln -sf <repository-path>/compiled-theme/application-themes/i3/config ~/.config/i3/
 ```
 
 add some image files in `~/.wallpapers/` and add the following to `~/.bashrc` and `/root/.bashrc`:
@@ -39,13 +44,6 @@ add some image files in `~/.wallpapers/` and add the following to `~/.bashrc` an
 ```
 source ~/.config/term-themes/monster/file-theme.sh
 source ~/.config/term-themes/monster/prompt-theme.sh
-```
-
-as well as the following to i3's `config` file:
-
-```
-exec_always --no-startup-id ~/.config/feh/fehbg
-exec picom -b
 ```
 
 Use something like `lxappearance` to select and activate the theme.
