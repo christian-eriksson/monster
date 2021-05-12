@@ -13,8 +13,8 @@
   element-selected-background:        rgba(5, 138, 190, 100%);
   element-urgent-background:          rgba(177, 29, 118, 100%);
   element-urgent-selected-background: rgba(221, 4, 138, 100%);
-  element-active-background:          rgba(70, 95, 2, 100%);
-  element-active-selected-background: rgba(128, 185, 2, 100%);
+  element-active-background:          rgba(61, 131, 59, 100%);
+  element-active-selected-background: rgba(99, 194, 96, 100%);
   internal-border-color:              rgba(9, 86, 116, 100%);
   tab-inactive-border-color:          rgba(85, 85, 85, 100%);
   tab-inactive-background-color:      rgba(60, 60, 60, 30%);

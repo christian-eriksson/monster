@@ -8,13 +8,13 @@ __m_blk_color="1;38;2;5;138;190"
 __m_chr_color="1;3;38;2;5;138;190"
 __m_orphan_color="1;38;2;244;127;0"
 __m_missing_color="1;38;2;206;109;5"
-__m_setuid_color="1;38;2;184;239;63;48;2;85;85;85"
-__m_setgid_color="1;38;2;170;170;170;48;2;70;95;2"
+__m_setuid_color="1;38;2;122;231;118;48;2;85;85;85"
+__m_setgid_color="1;38;2;170;170;170;48;2;61;131;59"
 __m_capability_color="1;38;2;124;21;83;48;2;170;170;170"
 __m_sticky_other_writable_color="1;4;38;2;170;170;170;48;2;5;112;153"
-__m_other_writable_color="1;4;38;2;70;95;2;48;2;170;170;170"
+__m_other_writable_color="1;4;38;2;61;131;59;48;2;170;170;170"
 __m_sticky_color="1;4;38;2;5;112;153;48;2;170;170;170"
-__m_exec_color="1;38;2;157;228;0"
+__m_exec_color="1;38;2;111;212;107"
 
 LS_COLORS="rs=0:di=$__m_dir_color:ln=$__m_link_color:mh=$__m_multihardlink_color:pi=$__m_pipe_color:so=$__m_sock_color"
 LS_COLORS="$LS_COLORS:do=$__m_door_color:bd=$__m_blk_color:cd=$__m_chr_color:or=$__m_orphan_color:mi=$__m_missing_color"
@@ -36,7 +36,7 @@ for image_extension in $__m_image_extensions; do
   LS_COLORS="$LS_COLORS:*$image_extension=$__m_image_color"
 done
 
-__m_video_color="38;2;157;228;0"
+__m_video_color="38;2;111;212;107"
 __m_video_extensions=".asf .avi .flc .fli .flv .gl .m2t .m2ts .m2v .m4p .m4v .mkv .mov .mp2 .mp4 .mp4v .mpe .mpeg .mpg \
 .mpv .mts .nuv .ogg .ogm .ogv .qt .rm .rmvb .swf .vob .webm .webm .wmv .yuv"
 for video_extension in $__m_video_extensions; do
@@ -44,13 +44,13 @@ for video_extension in $__m_video_extensions; do
 done
 
 
-__m_audio_color="38;2;184;239;63"
+__m_audio_color="38;2;122;231;118"
 __m_audio_extensions=".aac .au .flac .m4a .mid .midi .mka .mp3 .mpc .ra .wav .oga .opus .spx .ogx"
 for audio_extension in $__m_audio_extensions; do
   LS_COLORS="$LS_COLORS:*$audio_extension=$__m_audio_color"
 done
 
-__m_misc_media_color="38;2;128;185;2"
+__m_misc_media_color="38;2;99;194;96"
 __m_misc_media_extensions=".xspf"
 for misc_media_extension in $__m_misc_media_extensions; do
   LS_COLORS="$LS_COLORS:*$misc_media_extension=$__m_misc_media_color"

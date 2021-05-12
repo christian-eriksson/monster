@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="250" viewBox="0 0 400 250" version="1.1">
-  <rect x="0" y="0" width="400" height="250" fill="#9de400" />
-  <rect x="0" y="150" width="100" height="100" fill="#465f02" />
-  <rect x="100" y="150" width="100" height="100" fill="#699000" />
-  <rect x="200" y="150" width="100" height="100" fill="#80b902" />
-  <rect x="300" y="150" width="100" height="100" fill="#b8ef3f" />
+  <rect x="0" y="0" width="400" height="250" fill="#6fd46b" />
+  <rect x="0" y="150" width="100" height="100" fill="#3d833b" />
+  <rect x="100" y="150" width="100" height="100" fill="#5e925b" />
+  <rect x="200" y="150" width="100" height="100" fill="#63c260" />
+  <rect x="300" y="150" width="100" height="100" fill="#7ae776" />
 </svg>
