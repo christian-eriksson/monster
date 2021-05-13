@@ -21,7 +21,7 @@ A pretty monster for theming a i3 window manager environment.
 
 ## Install
 
-Prepare by creating a base config for i3, it should be a valid i3 config without commands to start fehbg and picom. The partial config files in the [i3 directory](application-themes/i3/partial-configs) will be appended to this base config.
+Prepare by creating a base config for i3, it should be a valid i3 config without commands to start fehbg and picom as well as the `bar{}` block, color and font settings. The partial config files in the [i3 directory](application-themes/i3/partial-configs) will be appended to this base config.
 
 To install the theme:
 
