@@ -2,39 +2,65 @@
 
 The color scheme used for the Monster theme.
 
-## Blues
+## Colors
+
+These are the colors used by the Monster themes.
+
+### Teals
 
 The main detailing colors of the Monster theme
-![Blue colors used by the Monster theme](./blues.svg)
 
-## Magentas
+![Teal colors used by the Monster theme](./teals.svg)
 
-Primarily for things that wants attention without being dangerous
+### Magentas
+
+Primarily for things that wants urgent attention. Also used for warnings that wants some sort of action from the user.
+
 ![Magenta colors used by the Monster theme](./magentas.svg)
 
-
-
-## Greens
+### Greens
 
 Things thats going to plan, is successful or asking confirmation may use the greens
-![green colors used by the Monster theme](./greens.svg)
 
+![Green colors used by the Monster theme](./greens.svg)
 
-## Yellows
+### Yellows
 
-Mostly used for decoration but, may used for warnings before they get dangerous
+Mostly used for decoration but, may used for warnings before they get dangerous or needs action.
 
 ![Yellow colors used by the Monster theme](./yellows.svg)
 
+### Purples
 
-##Greys
- 
+Mostly used for decoration but, may be used for things that wants attention but are not critical in any way.
+
+![Purple colors used by the Monster theme](./purples.svg)
+
+### Blues
+
+Decoration color when the main colors are not sufficient. Doesn't usually have a significant meaning.
+
+![Blue colors used by the Monster theme](./blues.svg)
+
+
+### Grays
+
 Mostly used for backgrounds
 
 ![gray colors used by the Monster theme](./grays.svg)
 
-## Text color
+## Examples
+
+This is how the colors may be used in the Monster theme.
+
+### Text
 
 With the most common backgrounds
 
 ![colors used for text in the Monster theme](./examples/text.svg)
+
+### Status bar
+
+With the most common styles
+
+![colors used for the status bar in the Monster theme](./examples/status-bar.svg)
