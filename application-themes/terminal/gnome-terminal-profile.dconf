@@ -1,0 +1,18 @@
+[/]
+background-color='rgb(51,51,51)'
+background-transparency-percent=0
+bold-color='#000000000000'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cursor-colors-set=false
+font='DejaVuSansMono Nerd Font Mono 11'
+foreground-color='#E6E6E6'
+highlight-colors-set=false
+palette=['rgb(51,51,51)','rgb(196,36,132)','rgb(99,194,96)','rgb(248,217,103)','rgb(94,113,196)','rgb(152,111,185)','rgb(5,138,190)','rgb(182,182,182)','rgb(170,170,170)','rgb(221,4,138)','rgb(122,231,118)','rgb(255,230,142)','rgb(126,150,255)','rgb(184,137,223)','rgb(105,172,197)' ,'rgb(230,230,230)'  ]
+use-system-font=false
+use-theme-colors=true
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='Monster'
+
+

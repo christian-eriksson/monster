@@ -47,6 +47,7 @@ ln -sf <repository-path>/compiled-theme/application-themes/rofi/config.rasi ~/.c
 mkdir -p ~/.config/i3
 ln -sf <repository-path>/compiled-theme/application-themes/i3/i3blocks.conf ~/.config/i3/
 ln -sf <repository-path>/compiled-theme/application-themes/i3/config ~/.config/i3/
+./install-term-profile.sh
 ```
 
 add some image files in `~/.wallpapers/` and add the following to `~/.bashrc` and `/root/.bashrc`:
