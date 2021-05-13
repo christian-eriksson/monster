@@ -12,22 +12,29 @@ The main detailing colors of the Monster theme
 Primarily for things that wants attention without being dangerous
 ![Magenta colors used by the Monster theme](./magentas.svg)
 
-## Orange
 
-Color for warnings and things not going to plan
-![orange colors used by the Monster theme](./oranges.svg)
 
 ## Greens
 
 Things thats going to plan, is successful or asking confirmation may use the greens
 ![green colors used by the Monster theme](./greens.svg)
 
-## Grays
 
+## Yellows
+
+Mostly used for decoration but, may used for warnings before they get dangerous
+
+![Yellow colors used by the Monster theme](./yellows.svg)
+
+
+##Greys
+ 
 Mostly used for backgrounds
+
 ![gray colors used by the Monster theme](./grays.svg)
 
 ## Text color
 
 With the most common backgrounds
+
 ![colors used for text in the Monster theme](./examples/text.svg)
