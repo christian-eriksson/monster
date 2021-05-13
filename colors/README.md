@@ -30,4 +30,4 @@ Mostly used for backgrounds
 ## Text color
 
 With the most common backgrounds
-![colors used for text in the Monster theme](./text.svg)
+![colors used for text in the Monster theme](./examples/text.svg)
