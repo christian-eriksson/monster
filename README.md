@@ -21,13 +21,13 @@ A pretty monster for theming a i3 window manager environment.
 
 ## Install
 
-Prepare by creating a base config for i3, it should be a valid i3 config without commands to start fehbg and picom as well as the `bar{}` block, color and font settings. The partial config files in the [i3 directory](application-themes/i3/partial-configs) will be appended to this base config.
+Prepare by creating a base config for i3, it should be a valid i3 config without commands to start fehbg and picom as well as the `bar{}` block, color and font settings. The partial config files in the [i3 directory](application-themes/i3/partial-configs) will be appended to this base config. If you wish to show more block device status entries in the status bar, create a i3blocks disk config file containing entries similar to home and root in [i3blocks.conf](application-themes/i3/i3blocks.conf) 
 
 To install the theme:
 
 ```
 clone <repository>
-./build.sh <home_dir> <base_i3_config_path> [<i3blocks_disk_config>]
+./build.sh <home_dir> <base_i3_config_path> [<i3blocks_disk_config_path>]
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 ln -sf <repository-path>/compiled-theme/gtk/gtk-3.0/app-specific.css ~/.config/gtk-3.0/gtk.css
 mkdir -p ~/.config/term-themes
@@ -63,7 +63,7 @@ Use something like `lxappearance` to select and activate the theme.
 
 If you want to make changes you'll need the following:
 
-- `sassc`
+- The required dependencies listed above 
 - GTK dev package
   - `libgtk-3-dev` (debian)
   - `gtk3-devel` (fedora)
@@ -114,7 +114,7 @@ To compile the theme (if you have made changes):
 
 ```
 cd <repository-path>
-sassc -t compact gtk-3.0/main.scss compiled-theme/gtk-3.0/gtk.css
+./build.sh <home_dir> <base_i3_config_path> [<i3blocks_disk_config_path>]
 ```
 
 ## Inspirations
