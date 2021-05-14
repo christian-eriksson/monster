@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Monster",
+  "theme": {
+    "images": {},
+    "properties": {},
+    "colors": {
+      "toolbar": "rgb(51, 51, 51)",
+      "toolbar_text": "rgb(105, 172, 197)",
+      "frame": "rgb(60, 60, 60)",
+      "tab_background_text": "rgb(230, 230, 230)",
+      "toolbar_field": "rgb(170, 170, 170)",
+      "toolbar_field_text": "rgb(221, 4, 138)",
+      "tab_line": "rgb(105, 172, 197)",
+      "popup": "rgb(51, 51, 51)",
+      "popup_text": "rgb(230, 230, 230)",
+      "button_background_active": "rgb(5, 112, 153)",
+      "button_background_hover": "rgb(5, 138, 190)",
+      "frame_inactive": "rgb(60, 60, 60)",
+      "icons_attention": "rgb(221, 4, 138)",
+      "icons": "rgb(105, 172, 197)",
+      "popup_border": "rgb(105, 172, 197)",
+      "popup_highlight": "rgb(221, 4, 138)",
+      "sidebar_highlight": "rgb(221, 4, 138)",
+      "sidebar": "rgb(51, 51, 51)",
+      "tab_text": "rgb(230, 230, 230)",
+      "toolbar_field_border_focus": "rgb(105, 172, 197)",
+      "toolbar_field_border": "rgb(105, 172, 197)",
+      "toolbar_field_highlight": "rgb(221, 4, 138)",
+      "toolbar_field_text_focus": "rgb(221, 4, 138)",
+      "toolbar_top_separator": "rgb(105, 172, 197)",
+      "tab_loading": "rgb(105, 172, 197)"
+    }
+  }
+}

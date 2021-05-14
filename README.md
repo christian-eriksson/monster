@@ -59,6 +59,8 @@ source ~/.config/term-themes/monster/prompt-theme.sh
 
 Use something like `lxappearance` to select and activate the theme.
 
+For the Firefox theme is published on [mozilla's addon store](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/) and can be installed from there.
+
 ## Dependencies
 
 If you want to make changes you'll need the following:
@@ -107,6 +109,14 @@ It's not always clear what selectors will impact what elements. It may be helpfu
 ### Terminal
 
 We use the `LS_COLORS` environment variable to set the colors for file types in the terminal. We use RGB values in the color code strings, `38;2;RRR;BBB;GGG`, so make sure that your terminal emulator supports this.
+
+### Firefox
+
+To make changes to the firefox theme use the [Firefox Color Site](https://color.firefox.com/). If a previous version is loaded in Firefox you can start making changes. If not, transfer the values in the [manifest.json](application-themes/firefox/manifest.json) to the site manually.
+
+Once you are happy with the new version export the theme, both the `*.zip` and `*.xpi`. Unpack the manifest from the zip and copy the manifest and `*.xpi` to the repository.
+
+If you wish to publish the theme for yourself it has to go through Mozilla to be signed and possible to add to Firefox. Sign up for a [developer's account](https://addons.mozilla.org/en-US/developers/) and submit a theme for self distribution.
 
 ## Compile Theme
 
