@@ -63,7 +63,8 @@ echo "##################################
 
 for file in ${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/i3/partial-configs/*; do
     if [ -f "$file" ]; then
-        cat "$file" >> ${COMPILED_I3_CONFIG}
+        config=$(cat "$file")
+        echo -e "${config}\n" >> ${COMPILED_I3_CONFIG}
     fi
 done
 
