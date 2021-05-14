@@ -4,13 +4,13 @@ usage() {
   echo "Usage: ./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config>]"
 }
 
-[ -z "$1" ] && echo -e "Please provide a home dir for the user!\n" && usage && exit 1
+[ -z "$1" ] && printf "Please provide a home dir for the user!\n" && usage && exit 1
 HOME_DIR=${1%/}
 
-[ -z "$2" ] && echo -e "Please provide the path to a base i3 config!\n" && usage && exit 1
+[ -z "$2" ] && printf "Please provide the path to a base i3 config!\n" && usage && exit 1
 BASE_I3_CONFIG_PATH=$2
 
-[ -z "$3" ] && echo -e "Please provide the name of your network interface!\n" && usage && exit 1
+[ -z "$3" ] && printf "Please provide the name of your network interface!\n" && usage && exit 1
 NETWORK_INTERFACE=$3
 
 I3BLOCKS_DISK_CONFIG_PATH=$4
@@ -64,7 +64,7 @@ echo "##################################
 for file in ${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/i3/partial-configs/*; do
     if [ -f "$file" ]; then
         config=$(cat "$file")
-        echo -e "${config}\n" >> ${COMPILED_I3_CONFIG}
+        printf "${config}\n" >> ${COMPILED_I3_CONFIG}
     fi
 done
 
