@@ -1,7 +1,7 @@
 #!/bin/sh
 
 usage() {
-  echo "Usage: ./build.sh <home_dir> <base_i3_config_path> [<i3blocks_disk_config>]"
+  echo "Usage: ./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config>]"
 }
 
 [ -z "$1" ] && echo -e "Please provide a home dir for the user!\n" && usage && exit 1
@@ -10,7 +10,10 @@ HOME_DIR=${1%/}
 [ -z "$2" ] && echo -e "Please provide the path to a base i3 config!\n" && usage && exit 1
 BASE_I3_CONFIG_PATH=$2
 
-I3BLOCKS_DISK_CONFIG_PATH=$3
+[ -z "$3" ] && echo -e "Please provide the name of your network interface!\n" && usage && exit 1
+NETWORK_INTERFACE=$3
+
+I3BLOCKS_DISK_CONFIG_PATH=$4
 
 COMPILE_DIR=compiled-theme
 GTK3_DIR=gtk-3.0
@@ -30,7 +33,10 @@ I3BLOCKS_CONF_PATH=${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/i3/i3blocks.conf
 sed -i -e "s\{{HOME_DIR}}\\${HOME_DIR}\g" $I3BLOCKS_CONF_PATH
 
 DISK_ENTRIES=$(cat "${I3BLOCKS_DISK_CONFIG_PATH}" 2>/dev/null | tr "\n" "@")
-I3BLOCKS_CONF=$(sed -e "s%{{DISK_ENTRIES}}%${DISK_ENTRIES}%" $I3BLOCKS_CONF_PATH)
+sed -i -e "s%{{DISK_ENTRIES}}%${DISK_ENTRIES}%" $I3BLOCKS_CONF_PATH
+
+I3BLOCKS_CONF=$(sed -e "s%{{NETWORK_INTERFACE}}%${NETWORK_INTERFACE}%" $I3BLOCKS_CONF_PATH)
+
 echo "$I3BLOCKS_CONF" | tr "@" "\n" > $I3BLOCKS_CONF_PATH
 
 COMPILED_I3_CONFIG=${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/i3/config
