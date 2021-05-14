@@ -29,6 +29,7 @@ To install the theme:
 ```
 clone <repository>
 ./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config_path>]
+mkdir -p ~/.themes
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 ln -sf <repository-path>/compiled-theme/gtk/gtk-3.0/app-specific.css ~/.config/gtk-3.0/gtk.css
 mkdir -p ~/.config/term-themes
