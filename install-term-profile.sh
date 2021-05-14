@@ -10,4 +10,6 @@ monster_installed=$(echo "${installed_profiles}" | grep $uuid)
 
 [ -z "${monster_installed}" ] && dconf write "${dconf_path}/list"  "${installed_profiles}, '${uuid}']"
 
+dconf write "${dconf_path}/default"  "'${uuid}'"
+
 dconf load "${dconf_path}/:${uuid}/" < $profile_path
