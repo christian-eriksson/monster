@@ -507,6 +507,16 @@ scale {
   }
 }
 
+#SpinScale {
+  scale {
+    contents {
+      trough {
+        background-color: $text_field_background;
+      }
+    }
+  }
+}
+
 scrollbar {
   $slider_min_length: 40px;
   $slider_min_width: 3px;
