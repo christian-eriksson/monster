@@ -17,7 +17,8 @@ A pretty monster for theming a i3 window manager environment.
 - [pamixer](https://github.com/cdemoulins/pamixer), for i3blocks' volume script
 - [SASS commandline tool](https://sass-lang.com/install)
 - Terminal with support for RGB color code strings, eg. gnome-terminal
-- The [Picom compositor](https://wiki.archlinux.org/title/Picom)
+- The [Picom compositor](https://wiki.archlinux.org/title/Picom), it can be built from source [here](https://github.com/yshui/picom).
+- [rofi](https://github.com/davatorium/rofi) version 1.6.1 or newer.
 
 ## Install
 
