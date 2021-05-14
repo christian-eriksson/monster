@@ -22,7 +22,7 @@ A pretty monster for theming a i3 window manager environment.
 
 ## Install
 
-Prepare by creating a base config for i3, it should be a valid i3 config without commands to start fehbg and picom as well as the `bar{}` block, color and font settings. The partial config files in the [i3 directory](application-themes/i3/partial-configs) will be appended to this base config. If you wish to show more block device status entries in the status bar, create a i3blocks disk config file containing entries similar to home and root in [i3blocks.conf](application-themes/i3/i3blocks.conf) 
+Prepare by creating a base config for i3, it should be a valid i3 config without commands to start fehbg and picom as well as the `bar{}` block, color and font settings. The partial config files in the [i3 directory](application-themes/i3/partial-configs) will be appended to this base config. If you wish to show more block device status entries in the status bar, create a i3blocks disk config file containing entries similar to home and root in [i3blocks.conf](application-themes/i3/i3blocks.conf)
 
 To install the theme:
 
@@ -66,7 +66,7 @@ For the Firefox theme is published on [mozilla's addon store](https://addons.moz
 
 If you want to make changes you'll need the following:
 
-- The required dependencies listed above 
+- The required dependencies listed above
 - GTK dev package
   - `libgtk-3-dev` (debian)
   - `gtk3-devel` (fedora)
@@ -81,7 +81,7 @@ If you want to test the theme you'll need a couple of GTK applications at least 
 
 ### Application Windows
 
-The color theme themes applications using:
+The color theme styles applications built on:
 
 - GTK 2.0
 - GTK 3.0
@@ -103,7 +103,7 @@ gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
 
 Focus the GTK application and press: `Control+Shift+D`.
 
-> *Note:* Some applications binds `ctrl+shift+d` to other actions in which case you might need to try the `GTK_DEBUG` option.
+> _Note:_ Some applications binds `ctrl+shift+d` to other actions in which case you might need to try the `GTK_DEBUG` option.
 
 It's not always clear what selectors will impact what elements. It may be helpful to use a finished theme (preferably quite minimalistic), change the colors, check what elements changes and what selector the color was used in. [AdMin](https://github.com/nrhodes91/AdMin) is a good choice to play around with. You may have to create a gtk-2.0 directory and `gtkrc` file for your theme chooser application (e.g. lxappearence) to find the theme, you may copy the gtk-2.0 directory of this repo.
 
