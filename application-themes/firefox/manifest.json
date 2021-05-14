@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.0",
+  "version": "1.0.1",
   "name": "Monster",
   "theme": {
     "images": {},
@@ -11,7 +11,7 @@
       "frame": "rgb(60, 60, 60)",
       "tab_background_text": "rgb(230, 230, 230)",
       "toolbar_field": "rgb(170, 170, 170)",
-      "toolbar_field_text": "rgb(221, 4, 138)",
+      "toolbar_field_text": "rgb(177, 29, 118)",
       "tab_line": "rgb(105, 172, 197)",
       "popup": "rgb(51, 51, 51)",
       "popup_text": "rgb(230, 230, 230)",
@@ -21,14 +21,14 @@
       "icons_attention": "rgb(221, 4, 138)",
       "icons": "rgb(105, 172, 197)",
       "popup_border": "rgb(105, 172, 197)",
-      "popup_highlight": "rgb(221, 4, 138)",
-      "sidebar_highlight": "rgb(221, 4, 138)",
+      "popup_highlight": "rgb(177, 29, 118)",
+      "sidebar_highlight": "rgb(177, 29, 118)",
       "sidebar": "rgb(51, 51, 51)",
       "tab_text": "rgb(230, 230, 230)",
       "toolbar_field_border_focus": "rgb(105, 172, 197)",
       "toolbar_field_border": "rgb(105, 172, 197)",
-      "toolbar_field_highlight": "rgb(221, 4, 138)",
-      "toolbar_field_text_focus": "rgb(221, 4, 138)",
+      "toolbar_field_highlight": "rgb(177, 29, 118)",
+      "toolbar_field_text_focus": "rgb(177, 29, 118)",
       "toolbar_top_separator": "rgb(105, 172, 197)",
       "tab_loading": "rgb(105, 172, 197)"
     }
