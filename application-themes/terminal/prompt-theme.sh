@@ -109,7 +109,7 @@ __m_get_path_end() {
 __m__get_git_head_location() {
   __m_git_branch="$(git symbolic-ref -q --short HEAD 2>/dev/null)"
   __m_git_tag="$(git describe --tags --exact-match 2>/dev/null)"
-  __m_git_commit_sha="$(git rev-parse --short HEAD)"
+  __m_git_commit_sha="$(git rev-parse --short HEAD 2>/dev/null)"
 
   if [ -n "${__m_git_branch}" ]; then
     echo "${__m_git_branch_symbol} ${__m_git_branch}"
