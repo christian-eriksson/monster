@@ -42,8 +42,9 @@ I3_DIR=${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/i3
 if [ -n "${HAS_BATTERY}" ]; then
   BATTERY_CONFIG_PATH=${I3_DIR}/conditional-configs/battery.conf
   BATTERY_ENTRY=$(cat "${BATTERY_CONFIG_PATH}" 2>/dev/null | tr "\n" "@")
-  sed -i -e "s#{{BATTERY}}#${BATTERY_ENTRY}#" $I3BLOCKS_CONF_PATH
 fi
+
+sed -i -e "s#{{BATTERY}}#${BATTERY_ENTRY}#" $I3BLOCKS_CONF_PATH
 
 I3BLOCKS_CONF=$(sed -e "s%{{NETWORK_INTERFACE}}%${NETWORK_INTERFACE}%" $I3BLOCKS_CONF_PATH)
 
