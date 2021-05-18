@@ -19,6 +19,7 @@ A pretty monster for theming a i3 window manager environment.
 - Terminal with support for RGB color code strings, eg. gnome-terminal
 - The [Picom compositor](https://wiki.archlinux.org/title/Picom), it can be built from source [here](https://github.com/yshui/picom).
 - [rofi](https://github.com/davatorium/rofi) version 1.6.1 or newer.
+- `acpi` package, for checking battery status
 
 ## Install
 
@@ -28,7 +29,7 @@ To install the theme:
 
 ```
 clone <repository>
-./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config_path>]
+./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config_path> <has_battery>]
 mkdir -p ~/.themes
 ln -sf <repository-path>/compiled-theme/gtk ~/.themes/monster
 ln -sf <repository-path>/compiled-theme/gtk/gtk-3.0/app-specific.css ~/.config/gtk-3.0/gtk.css
@@ -126,7 +127,7 @@ To compile the theme (if you have made changes):
 
 ```
 cd <repository-path>
-./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config_path>]
+./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config_path> <has_battery>]
 ```
 
 ## Inspirations
