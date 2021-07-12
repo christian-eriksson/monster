@@ -130,6 +130,16 @@ cd <repository-path>
 ./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config_path> <has_battery>]
 ```
 
+Example values:
+
+| Name                        | value                             | Comment                                  |
+| --------------------------- | --------------------------------- | ---------------------------------------- |
+| `home_dir`                  | `/home/user`                      |
+| `base_i3_config_path`       | `~/.config/i3/config.base`        | base config for i3 to merge with monster |
+| `network_interface_name`    | `enp5s0`                          |
+| `i3blocks_disk_config_path` | `~/.config/i3/disk_i3blocks.conf` | that contains a disc config to be merged |
+| `has_battery`               | `1`                               |
+
 ## Inspirations
 
 The main inspirations for monster are:
