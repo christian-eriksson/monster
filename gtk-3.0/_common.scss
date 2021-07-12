@@ -5,6 +5,16 @@ $button_padding: 5px;
   background-color: $bg_color;
 }
 
+textview text {
+  background-color: $bg_color;
+  color: $fg_color;
+}
+
+.view text selection {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+}
+
 .view,
 %view {
   color: $text_color;
