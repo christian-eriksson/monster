@@ -159,3 +159,38 @@ The main inspirations for monster are:
   - The `gtkrc*` files for the GTK 2 part of the theme comes directly from this theme, though the colors have been modified to fit monster.
 - [AdMin](https://github.com/nrhodes91/AdMin)
   - The way we organize scss files for the GTK 3 parts are inspired by this theme.
+
+## Tips & Tricks
+
+Some tips for common errors.
+
+### i3 on Ubuntu with gdm
+
+You might need to add some desktop files in the xsession directory for i3 to show up as an alternative on the login screen.
+
+`/usr/share/xsession/i3.desktop`:
+
+```
+[Desktop Entry]
+Name=i3
+Comment=improved dynamic tiling window manager
+Exec=i3
+TryExec=i3
+Type=Application
+Keywords=tiling;wm;windowmanager;window;manager
+```
+
+`/usr/share/xsession/i3-with-shmlog.desktop`:
+
+```
+[Desktop Entry]
+Name=i3 (with debug log)
+Comment=improved dynamic tiling window manager
+Exec=i3-with-shmlog
+Type=Application
+Keywords=tiling;wm;windowmanager;window;manager
+```
+
+### Rofi thows error
+
+If rofi doesn't start and when trying to run `rofi` in the terminal it throws `input in flex scanner failed`, for now I've no solution other than trying different versions of it's dependencies (not guaranteed to work). The recommended action is to fall back on `dmenu` as your run dialog.
