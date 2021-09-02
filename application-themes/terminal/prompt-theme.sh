@@ -93,7 +93,11 @@ __m_get_venv_section() {
 
 __m_is_git_path() {
   __m_git_executable=$(which git 2>/dev/null)
-  [ -f .git/HEAD ] && [ -x "$__m_git_executable" ] && return
+  if [ -x "$__m_git_executable" ]; then
+    $__m_git_executable status &>/dev/null
+    __m_git_status_return=$?
+  fi
+  [ -x "$__m_git_executable" ] && [ "${__m_git_status_return}" == "0" ] && return
   false
 }
 
