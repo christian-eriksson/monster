@@ -2,7 +2,7 @@
 
 [ -z "$INTERFACE" ] && exit 1
 
-ip_address=$(ip address show $INTERFACE | grep -o "inet \([1-9]\{0,3\}\.\)\{3\}[1-9]\{0,3\}" | awk '{print $2}')
+ip_address=$(ip address show $INTERFACE | grep -o "inet \([0-9]\{0,3\}\.\)\{3\}[0-9]\{0,3\}" | awk '{print $2}')
 
 if [ -n "${ip_address}" ]; then
   full_text=$ip_address
