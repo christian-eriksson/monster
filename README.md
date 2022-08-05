@@ -40,40 +40,14 @@ clone <repository>
 Then build it as described under the Build Section, finally:
 
 ```
-mkdir -p ~/.themes
-MONSTER_PATH=<repository-path>
-ln -sf $MONSTER_PATH/compiled-theme/gtk ~/.themes/monster
-ln -sf $MONSTER_PATH/compiled-theme/gtk/gtk-3.0/app-specific.css ~/.config/gtk-3.0/gtk.css
-mkdir -p ~/.config/term-themes
-mkdir -p /root/.config/term-themes
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/terminal/ ~/.config/term-themes/monster
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/terminal/ /root/.config/term-themes/monster
-mkdir -p ~/.config/feh
-mkdir -p ~/.wallpapers
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/desktop/fehbg ~/.config/feh/fehbg
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/picom ~/.config/
-mkdir -p ~/.local/bin
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/i3/scripts ~/.local/bin/i3blocks
-mkdir -p ~/.local/share/rofi/themes
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/rofi/monster.rasi ~/.local/share/rofi/themes
-mkdir -p ~/.config/rofi
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/rofi/config.rasi ~/.config/rofi
-mkdir -p ~/.config/i3
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/i3/i3blocks.conf ~/.config/i3/
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/i3/config ~/.config/i3/
-./install-term-profile.sh
+./install.sh [terminal]
 ```
 
-add some image files in `~/.wallpapers/` and add the following to `~/.bashrc` and `/root/.bashrc`:
+add some image files in `~/.wallpapers/`.
 
-```
-source ~/.config/term-themes/monster/file-theme.sh
-source ~/.config/term-themes/monster/prompt-theme.sh
-```
-
-Use something like `lxappearance` to select and activate the theme.
 
 For the Firefox theme is published on [mozilla's addon store](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/) and can be installed from there.
+You may need to logout (or reboot) to make all changes take effect.
 
 ## Dependencies
 
@@ -138,18 +112,32 @@ To build/compile the theme (if you have made changes):
 
 ```
 cd <repository-path>
-./build.sh <home_dir> <base_i3_config_path> <network_interface_name> [<i3blocks_disk_config_path> <has_battery>]
+./build.sh <network_interface_name> [<base_i3_config_path> <i3blocks_disk_config_path> <has_battery>]
 ```
 
 Example values:
 
-| Name                        | value                             | Comment                                  |
-| --------------------------- | --------------------------------- | ---------------------------------------- |
-| `home_dir`                  | `/home/user`                      |
-| `base_i3_config_path`       | `~/.config/i3/config.base`        | base config for i3 to merge with monster |
-| `network_interface_name`    | `enp5s0`                          |
-| `i3blocks_disk_config_path` | `~/.config/i3/disk_i3blocks.conf` | that contains a disc config to be merged |
-| `has_battery`               | `1`                               |
+| Name                        | value                                    | Comment                                  |
+| --------------------------- | ---------------------------------------- | ---------------------------------------- |
+| `network_interface_name`    | `enp5s0`                                 |                                          |
+| `base_i3_config_path`       | `~/.config/i3/config.base`               | base config for i3 to merge with monster |
+| `i3blocks_disk_config_path` | `~/.config/i3/disk_i3blocks.conf` or `1` | that contains a disc config to be merged |
+| `has_battery`               | `1`                                      |                                          |
+
+You can get the `<network_interface_name>` using `ip addr`.
+
+The `<base_i3_config_path>` should point to a base bones I3 config file similar
+to [`application-themes/i3/base/config.base`](application-themes/i3/base/config.base).
+If no path is given the
+
+The `<i3blocks_disk_config_path>` should point to a file like
+[`application-themes/i3/base/disk_i3blocks.conf`](application-themes/i3/base/disk_i3blocks.conf)
+The configuration file can have more tha one configuration block. Each block
+will show the remaining disc space in the i3 blocks bar. If a value of `1` is
+given the example config is used.
+
+Empty strings `""` can be given to the options if you want to ommit an option
+but use an option later in the list.
 
 ## Inspirations
 

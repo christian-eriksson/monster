@@ -22,5 +22,5 @@ dconf write "${dconf_path}/default"  "'${uuid}'"
 
 dconf load "${dconf_path}/:${uuid}/" < $profile_path
 
-echo "term theme installed"
+echo "gnome terminal theme installed"
 
