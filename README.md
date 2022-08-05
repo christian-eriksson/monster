@@ -50,8 +50,9 @@ Then build it as described under the Build Section, finally:
 
 add some image files in `~/.wallpapers/`.
 
+For the Firefox theme is published on [mozilla's addon store](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/)
+and can be [installed from there](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/).
 
-For the Firefox theme is published on [mozilla's addon store](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/) and can be installed from there.
 You may need to logout (or reboot) to make all changes take effect.
 
 ## Dependencies
