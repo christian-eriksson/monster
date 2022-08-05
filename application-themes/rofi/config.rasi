@@ -1,6 +1,6 @@
 configuration {
-  modi: "drun,file-browser,run";
+  modi: "drun,filebrowser,run";
   show-icons: true;
   sidebar-mode: true;
-  theme: "monster";
 }
+@theme "monster"
