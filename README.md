@@ -9,17 +9,22 @@ A pretty monster for theming a i3 window manager environment.
 - a patched [nerd font](https://github.com/ryanoasis/nerd-fonts).
   - By default this i3 configuration uses:
     - NotoSans Nerd Font & NotoSans Nerd Font Mono for the i3bar
-  - It also expects a Mono Nerd font as default font for the system and terminal, eg.:
-    - DejaVuSansMono Nerd Font Mono
+  - It also expects `DejaVuSansMono Nerd Font Mono` installed in the file
+    `DejaVu Sans Mono Nerd Font Complete Mono.ttf` under `/usr/local/share/fonts`
 - [feh image viewer](https://feh.finalrewind.org/)
 - i3 window manager, preferably [i3-gaps](https://github.com/Airblader/i3)
 - [i3 blocks](https://vivien.github.io/i3blocks/)
 - [pamixer](https://github.com/cdemoulins/pamixer), for i3blocks' volume script
-- [SASS commandline tool](https://sass-lang.com/install) (for now we use the old libSass and do not yet support Dart Sass)
-- Terminal with support for RGB color code strings, eg. gnome-terminal
-- The [Picom compositor](https://wiki.archlinux.org/title/Picom), it can be built from source [here](https://github.com/yshui/picom).
+- [SASS commandline tool](https://sass-lang.com/install) (for now we use the old
+  libSass and do not yet support Dart Sass)
+- Terminal with support for RGB color code strings, explicit support for:
+  - `gnome-terminal`
+- The [Picom compositor](https://wiki.archlinux.org/title/Picom), it can be
+  built from source [here](https://github.com/yshui/picom).
 - [rofi](https://github.com/davatorium/rofi) version 1.6.1 or newer.
 - `acpi` package, for checking battery status
+- [`zip` package](https://man.archlinux.org/man/zip.1)
+- `mpstat`, for example from the [`sysstat` package](https://archlinux.org/packages/community/x86_64/sysstat/)
 
 **NOTE:** You may want to install i3-gaps from source, in which case: purge all i3 packages (if installed); follow the [build instructions](https://github.com/Airblader/i3/wiki/Building-from-source) from the repo; then run `sudo ninja install`. You might want to run the `meson` command as `meson --prefix /usr/local` in order to install i3-gaps to this directory.
 
