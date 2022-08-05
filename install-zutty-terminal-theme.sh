@@ -16,4 +16,6 @@ cat $MONSTER_PATH/application-themes/terminal/.Xresources >>/root/.Xresources
 
 xrdb -merge $home_dir/.Xresources
 
+chown -R $real_user:$real_user $home_dir/.Xresources
+
 echo "zutty term theme installed"

@@ -43,6 +43,12 @@ grep -vFf $MONSTER_PATH/compiled-theme/application-themes/terminal/.bashrc-patte
 mv $home_dir/.bashrc.tmp $home_dir/.bashrc
 cat $MONSTER_PATH/compiled-theme/application-themes/terminal/.bashrc-install >>$home_dir/.bashrc
 
+chown -R $real_user:$real_user $home_dir/.themes/monster \
+  $home_dir/.config/gtk-3.0 $home_dir/.config/term-themes $home_dir/.config/feh \
+  $home_dir/.wallpapers $home_dir/.local/bin $home_dir/.local/share/rofi/themes \
+  $home_dir/.config/rofi $home_dir/.config/i3 $home_dir/.bashrc \
+  $home_dir/.config/picom
+
 if [ "${terminal}" = "gnome-terminal" ]; then
   $MONSTER_PATH/install-gnome-terminal-profile.sh
 elif [ "${terminal}" = "zutty" ]; then

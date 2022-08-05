@@ -59,10 +59,11 @@ clone <repository>
 Then build it as described under the Build Section, finally:
 
 ```
-./install.sh [terminal]
+sudo ./install.sh [terminal]
 ```
 
-add some image files in `~/.wallpapers/`.
+To install the theme for your user. Finally add some image files in
+`~/.wallpapers/`.
 
 For the Firefox theme is published on [mozilla's addon store](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/)
 and can be [installed from there](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/).
