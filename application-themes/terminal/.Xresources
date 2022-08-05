@@ -1,0 +1,22 @@
+Zutty.bg: #333333
+Zutty.font: DejaVu Sans Mono Nerd Font Complete Mono
+Zutty.fontsize: 24
+Zutty.fontpath: /usr/share/fonts:/usr/local/share/fonts
+Zutty.boldColors: true
+
+Zutty.color0: #333333
+Zutty.color1: #c42484
+Zutty.color2: #63c260
+Zutty.color3: #f8d967
+Zutty.color4: #5e71c4
+Zutty.color5: #986fb9
+Zutty.color6: #058abe
+Zutty.color7: #b6b6b6
+Zutty.color8: #aaaaaa
+Zutty.color9: #dd048a
+Zutty.color10: #7ae776
+Zutty.color11: #ffe68e
+Zutty.color12: #7e96ff
+Zutty.color13: #b889df
+Zutty.color14: #69acc5
+Zutty.color15: #e6e6e6

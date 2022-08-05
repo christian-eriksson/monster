@@ -45,6 +45,8 @@ cat $MONSTER_PATH/compiled-theme/application-themes/terminal/.bashrc-install >>$
 
 if [ "${terminal}" = "gnome-terminal" ]; then
   $MONSTER_PATH/install-gnome-terminal-profile.sh
+elif [ "${terminal}" = "zutty" ]; then
+  $MONSTER_PATH/install-zutty-terminal-theme.sh
 else
   echo "WARNING: terminal emulator '${terminal}' is not recognized"
 fi
