@@ -1,6 +1,6 @@
 #!/bin/sh
 
-__m_section_delimiter=""
+__m_section_delimiter=""
 __m_section_divider_symbol=""
 
 # Using \001 and \002 instead of \001 and \002 since the __m_reset_style will be used in command substitution
