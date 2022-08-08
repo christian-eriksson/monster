@@ -65,7 +65,9 @@ sudo ./install.sh [terminal]
 ```
 
 To install the theme for your user. Finally add some image files in
-`~/.wallpapers/` and `~/.lockscreens`.
+`~/.wallpapers/` and `~/.lockscreens`. You can find some examples of [lockscreens](application-themes/i3/i3lock/samples)
+and [wallpapers](application-themes/desktop/samples) under application-themes
+for the desktop and i3lock.
 
 Set the timeout for the lockscreen with: `xset s 600`, to make the screen lock
 after 10 minutes of inactivity.
@@ -240,8 +242,8 @@ your run dialog.
 
 ### Sample wallpapers and lockscreens
 
-The images for the sample [lockscreens](application-themes/i3/i3lock/lockscreens)
-and [wallpapers](application-themes/desktop/wallpappers) are taken from the
+The images for the sample [lockscreens](application-themes/i3/i3lock/samples)
+and [wallpapers](application-themes/desktop/samples) are taken from the
 [Hubble Space Telescope](https://esahubble.org/images/?) so credit should go to
 ESA/Hubble. For more information about the images have a look under
 [application themes](application-themes/README.md).
