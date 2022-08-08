@@ -15,6 +15,7 @@ A pretty monster for theming a i3 window manager environment.
 - [feh image viewer](https://feh.finalrewind.org/)
 - i3 window manager, preferably [i3-gaps](https://github.com/Airblader/i3)
 - [i3 blocks](https://vivien.github.io/i3blocks/)
+- [i3lock color](https://raymond.li/i3lock-color/)
 - [pamixer](https://github.com/cdemoulins/pamixer), for i3blocks' volume script
 - [SASS commandline tool](https://sass-lang.com/install) (for now we use the old
   libSass and do not yet support Dart Sass)
@@ -26,6 +27,7 @@ A pretty monster for theming a i3 window manager environment.
 - `acpi` package, for checking battery status
 - [`zip` package](https://man.archlinux.org/man/zip.1)
 - `mpstat`, for example from the [`sysstat` package](https://archlinux.org/packages/community/x86_64/sysstat/)
+- [`xss-lock`](https://man.archlinux.org/man/xss-lock.1)
 
 **NOTE:** You may want to install i3-gaps from source, in which case: purge all
 i3 packages (if installed); follow the [build instructions](https://github.com/Airblader/i3/wiki/Building-from-source)
@@ -63,7 +65,10 @@ sudo ./install.sh [terminal]
 ```
 
 To install the theme for your user. Finally add some image files in
-`~/.wallpapers/`.
+`~/.wallpapers/` and `~/.lockscreens`.
+
+Set the timeout for the lockscreen with: `xset s 600`, to make the screen lock
+after 10 minutes of inactivity.
 
 For the Firefox theme is published on [mozilla's addon store](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/)
 and can be [installed from there](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/).
@@ -232,3 +237,11 @@ If rofi doesn't start and when trying to run `rofi` in the terminal it throws
 different versions of it's dependencies (not guaranteed to work). The
 recommended action if another version doesn't work is to fall back on `dmenu` as
 your run dialog.
+
+### Sample wallpapers and lockscreens
+
+The images for the sample [lockscreens](application-themes/i3/i3lock/lockscreens)
+and [wallpapers](application-themes/desktop/wallpappers) are taken from the
+[Hubble Space Telescope](https://esahubble.org/images/?) so credit should go to
+ESA/Hubble. For more information about the images have a look under
+[application themes](application-themes/README.md).

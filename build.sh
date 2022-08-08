@@ -95,4 +95,6 @@ echo "##################################
 # Disk config: ${I3BLOCKS_DISK_CONFIG_PATH}
 ##################################" >> ${COMPILED_I3_CONFIG}
 
+sed -i -e "s\{{HOME_DIR}}\\${HOME}\g" $COMPILED_I3_CONFIG
+
 zip -q ${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/firefox/theme.zip ${COMPILE_DIR}/${APPLICATION_THEMES_DIR}/firefox/manifest.json

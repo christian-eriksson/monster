@@ -1,6 +1,15 @@
 set $mod Mod4
 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+set $Locker i3lock -i {{HOME_DIR}}/.lockscreens -F \
+        --slideshow-interval 60 --slideshow-random-selection -e \
+        --insidewrong-color=91065B99 --ringwrong-color=DD048AFF \
+        --wrong-color=E6E6E6FF --line-uses-inside --inside-color=02425C99 \
+        --ring-color=058ABEFF --keyhl-color=69ACC5FF --bshl-color=DD068AFF \
+        --separator-color=058ABEFF --ringver-color=986FB9FF \
+        --insidever-color=73548D99 --verif-color=E6E6E6FF
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $Locker --nofork
+bindsym $mod+Shift+l exec --no-startup-id $Locker
 
 # exec --no-startup-id nm-applet
 
