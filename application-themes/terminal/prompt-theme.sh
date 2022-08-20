@@ -7,6 +7,7 @@ __m_section_divider_symbol=""
 # https://wiki.archlinux.org/index.php/Bash/Prompt_customization#Bash_escape_sequences
 # https://superuser.com/questions/301353/escape-non-printing-characters-in-a-function-for-a-bash-prompt/301355#301355
 __m_reset_style="\001\e[0m\002"
+__m_clear_line="\033[K"
 
 __m_venv_label_symbol=""
 __m_venv_foreground_color="177;29;118"
@@ -194,6 +195,7 @@ __m_user_prompt="\n${TITLEBAR}\
 ${__m_user_section}\
 ${__m_path_section}\
 \$(__m_get_git_section)\
+${__m_clear_line}\
 \n${__m_input_section}${__m_reset_style} "
 __m_user_secondary_prompt="${__m_reset_style}${__m_input_indicator_color}${__m_secondary_input_start_symbol}${__m_reset_style} "
 
@@ -202,6 +204,7 @@ __m_root_prompt="\n${TITLEBAR}\
 ${__m_root_section}\
 ${__m_path_section}\
 \$(__m_get_git_section)\
+${__m_clear_line}\
 \n${__m_root_input_section}${__m_reset_style} "
 __m_root_secondary_prompt="${__m_reset_style}${__m_root_input_indicator_color}${__m_secondary_input_start_symbol}${__m_reset_style} "
 
