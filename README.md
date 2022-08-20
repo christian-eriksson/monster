@@ -75,6 +75,9 @@ after 10 minutes of inactivity.
 For the Firefox theme is published on [mozilla's addon store](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/)
 and can be [installed from there](https://addons.mozilla.org/en-US/firefox/addon/monster-theme/).
 
+If you want a more consistent look in your editor/IDE you may want to set the
+font to `DejaVuSansMono Nerd Font Mono` to mirror the terminal.
+
 You may need to logout (or reboot) to make all changes take effect.
 
 ## Dependencies
