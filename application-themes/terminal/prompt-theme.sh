@@ -95,7 +95,7 @@ __m_get_venv_section() {
     __m_venv_start_color=$(__m_create_color "${__m_venv_foreground_color}" "${__m_venv_background_color}")
     __m_section_end="$(__m_get_section_end "$__m_venv_background_color" "$__m_next_foreground_color")"
     __m_venv_label="$(__m_get_label "$__m_venv_background_color" "$__m_venv_foreground_color" "$__m_venv_label_symbol")"
-    echo -e "${__m_venv_label}${__m_venv_start_color} ($(basename $VIRTUAL_ENV)) ${__m_section_end}${__m_reset_style}"
+    echo -e "${__m_venv_label}${__m_venv_start_color} ("$(basename "$VIRTUAL_ENV")") ${__m_section_end}${__m_reset_style}"
   else
     echo ""
   fi
