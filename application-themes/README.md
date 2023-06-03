@@ -26,3 +26,7 @@ The images are cropped to a resolution of 3200x1800 and in the case of
 lockscreens a [lock silhouette](https://commons.wikimedia.org/wiki/File:Office_action.svg)
 has been superimpose on the images.
 
+https://creativecommons.org/licenses/by/4.0/
+https://esahubble.org/copyright/
+
+https://commons.wikimedia.org/wiki/File:Office_action.svg
