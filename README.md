@@ -165,19 +165,19 @@ To build/compile the theme (if you have made changes):
 
 ```
 cd <repository-path>
-./build.sh <network_interface_name> [<base_i3_config_path> <i3blocks_disk_config_path> <has_battery>]
+./build.sh <network_interface_names> [<base_i3_config_path> <i3blocks_disk_config_path> <has_battery>]
 ```
 
 Example values:
 
 | Name                        | value                                    | Comment                                  |
 | --------------------------- | ---------------------------------------- | ---------------------------------------- |
-| `network_interface_name`    | `enp5s0`                                 |                                          |
+| `network_interface_names`   | `enp5s0` or `"wlan0 eth0"`               |                                          |
 | `base_i3_config_path`       | `~/.config/i3/config.base`               | base config for i3 to merge with monster |
 | `i3blocks_disk_config_path` | `~/.config/i3/disk_i3blocks.conf` or `1` | that contains a disc config to be merged |
 | `has_battery`               | `1`                                      |                                          |
 
-You can get the `<network_interface_name>` using `ip addr`.
+You can get the `<network_interface_names>` using `ip addr`.
 
 The `<base_i3_config_path>` should point to a base bones I3 config file similar
 to [`application-themes/i3/base/config.base`](application-themes/i3/base/config.base).

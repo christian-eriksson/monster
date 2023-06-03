@@ -1,14 +1,16 @@
 #!/bin/sh
 
-[ -z "$INTERFACE" ] && exit 1
+[ -z "$INTERFACES" ] && exit 1
 
-ip_address=$(ip address show $INTERFACE | grep -o "inet \([0-9]\{0,3\}\.\)\{3\}[0-9]\{0,3\}" | awk '{print $2}')
-
-if [ -n "${ip_address}" ]; then
-  full_text=$ip_address
-else
-  full_text="NO NETWORK"
-fi
+prioritized_route=$(ip route get 8.8.8.8 | head -n1 | awk '{ print $5";"$7 }')
+full_text="NO NETWORK"
+for interface in $INTERFACES; do
+  if [ $(echo $prioritized_route | grep -c "$interface") -eq 1 ]; then
+    ip_address=$(echo $prioritized_route | cut -d";" -f2)
+    full_text=$ip_address
+    break
+  fi
+done
 
 [ -n "${label}" ] && full_text=" ${full_text}"
 

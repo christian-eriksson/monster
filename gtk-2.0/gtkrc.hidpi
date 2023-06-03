@@ -630,7 +630,6 @@ style "xfdesktop-icon-view" {
 
   fg[NORMAL] = @bg_color
   fg[ACTIVE] = @bg_color
-
 }
 
 style "xfwm-tabwin" {
