@@ -24,26 +24,20 @@ else
 fi
 
 while read -r device; do
-    echo >&2 "DEVICE: $device"
     device_id=$(echo $device | awk '{ print $2 }')
-    echo >&2 "DEVICE ID: $device_id"
     device_name=$(echo $device | awk '$1=$2=""; { print $0 }')
-    echo >&2 "DEVICE NAME: $device_name"
     device_info=$(bluetoothctl info $device_id)
-    echo >&2 "DEVICE INFO: $device_info"
     connection_status=$(echo "${device_info}" | grep "Connected:" | awk '{ print $2 }')
-    echo >&2 "CONNECTION STATUS: $connection_status"
     if [ "${connection_status}" = "yes" ]; then
         icon=${CONNECTED_ICON:-""}
         connected_device="${device_name}"
         battery_percentage=$(echo "${device_info}" | grep -i "Battery Percentage:" | grep -o "(.*)" | grep -o "[[:digit:]]\+")
-        echo >&2 "BATTERY PERCENTAGE: $battery_percentage"
         break
     fi
 done < <(bluetoothctl devices)
 
 if [ -n "${connected_device}" ]; then
-    info=" ${connected_device}"
+    info="${connected_device}"
     if [ -n "${battery_percentage}" ]; then
         if [ "${battery_percentage}" -gt "69" ]; then
             battery_icon=" ${battery_max}"
@@ -88,11 +82,3 @@ echo $icon
 [ -n "${disabled}" ] && echo "${NOTICE_COLOR}"
 
 exit 0
-
-# echo >&2 "OUTPUT-----------"
-# echo >&2 $@
-# echo >&2 $connection_status
-
-# echo "              "
-
-# $(bluetoothctl devices | grep "PXC 550" | awk '{ print $2 }')
