@@ -21,11 +21,13 @@ else
 fi
 
 if [ "${current_mode}" = "extended" ]; then
-    icon=${EXTENED_ICON:-""}
+    icon=${EXTENED_ICON:-""}
 elif [ "${current_mode}" = "mirror" ]; then
     icon=${MIRROR_ICON:-""}
+elif [ "${current_mode}" = "external" ]; then
+    icon=${EXTERNAL_ICON:-""}
 else
-    icon=${SINGLE_ICON:-""}
+    icon=${SINGLE_ICON:-""}
 fi
 
 full_text="${icon}"
