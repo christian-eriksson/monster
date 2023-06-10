@@ -26,7 +26,7 @@ mkdir -p $home_dir/.wallpapers
 ln -sf $MONSTER_PATH/compiled-theme/application-themes/desktop/fehbg $home_dir/.config/feh/fehbg
 ln -sf $MONSTER_PATH/compiled-theme/application-themes/picom $home_dir/.config/
 mkdir -p $home_dir/.local/bin
-ln -sf $MONSTER_PATH/compiled-theme/application-themes/i3/scripts $home_dir/.local/bin/i3blocks
+ln -sf $MONSTER_PATH/compiled-theme/application-themes/i3/scripts $home_dir/.local/bin/i3
 mkdir -p $home_dir/.local/share/rofi/themes
 ln -sf $MONSTER_PATH/compiled-theme/application-themes/rofi/monster.rasi $home_dir/.local/share/rofi/themes
 mkdir -p $home_dir/.config/rofi
