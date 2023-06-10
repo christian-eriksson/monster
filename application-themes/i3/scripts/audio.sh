@@ -8,7 +8,6 @@ off_icon=${ICON_OFF:-""}
 volume=$(pamixer --get-volume)
 if [ "$(pamixer --get-mute)" = "false" ] && [ "${volume}" -gt "0" ]; then
   full_text=" $(pamixer --get-volume-human)"
-
   if [ "${volume}" -gt "70" ]; then
     icon=$high_icon
   elif [ "${volume}" -gt "30" ]; then
