@@ -16,6 +16,7 @@ A pretty monster for theming a i3 window manager environment.
 - i3 window manager, preferably [i3-gaps](https://github.com/Airblader/i3)
 - [i3 blocks](https://vivien.github.io/i3blocks/)
 - [i3lock color](https://raymond.li/i3lock-color/)
+- [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/), for sound and i3blocks' volume script
 - [pamixer](https://github.com/cdemoulins/pamixer), for i3blocks' volume script
 - [SASS commandline tool](https://sass-lang.com/install) (for now we use the old
   libSass and do not yet support Dart Sass)
@@ -172,7 +173,7 @@ Example values:
 
 | Name                        | value                                    | Comment                                  |
 | --------------------------- | ---------------------------------------- | ---------------------------------------- |
-| `network_interface_names`   | `enp5s0` or `"wlan0 eth0"`               |                                          |
+| `network_interface_names`   | `enp5s0` or `"wlan0 ethusb0"`            |                                          |
 | `base_i3_config_path`       | `~/.config/i3/config.base`               | base config for i3 to merge with monster |
 | `i3blocks_disk_config_path` | `~/.config/i3/disk_i3blocks.conf` or `1` | that contains a disc config to be merged |
 | `has_battery`               | `1`                                      |                                          |
