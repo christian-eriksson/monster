@@ -19,14 +19,21 @@ if [ "$(echo $device_statuses | cut -d';' -f1)" = "blocked" ] || [ "$(echo $devi
     icon=${DISABLED_ICON:-""}
     disabled="true"
 else
-    bluetooth_status="unblocked"
     icon=${ENABLED_ICON:-""}
 fi
 
 while read -r device; do
     device_id=$(echo $device | awk '{ print $2 }')
     device_name=$(echo $device | awk '$1=$2=""; { print $0 }')
-    device_info=$(bluetoothctl info $device_id)
+    if [ -z "${device_id}" ] || [ -z "${device_name}" ]; then
+        continue
+    fi
+    device_info=$(bluetoothctl info $device_id || true)
+    if echo "$device_info" | grep -iq "no default controller"; then
+        icon=${DISABLED_ICON:-""}
+        disabled="true"
+        break
+    fi
     connection_status=$(echo "${device_info}" | grep "Connected:" | awk '{ print $2 }')
     if [ "${connection_status}" = "yes" ]; then
         icon=${CONNECTED_ICON:-""}
@@ -73,8 +80,6 @@ if [ -n "${connected_device}" ]; then
         info="${info}${battery_icon}"
     fi
 fi
-
-
 
 echo "${icon}${info}"
 echo $icon
